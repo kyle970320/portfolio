@@ -7,6 +7,31 @@
   --color-light-gray: #f4f8fb;
   --color-basic-gray: #cbd5e0;
   --color-dark-gray: #94adbc;
+  --font-gmarket: "gmarket";
+}
+@font-face {
+  font-family: "pretendard";
+  src: url("/font/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "gmarket";
+  src: url("/font/GmarketSansTTFLight.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "gmarket";
+  src: url("/font/GmarketSansTTFMedium.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "gmarket";
+  src: url("/font/GmarketSansTTFBold.ttf");
+  font-weight: 700;
+  font-display: swap;
 }
 @layer utilities {
   .font-gmarket {

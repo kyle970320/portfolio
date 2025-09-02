@@ -1,7 +1,12 @@
 import Header from "./layout/Header";
 import Squares from "./layout/Squares";
+import ContactSection from "./sections/ContackSection";
 import GlutterBlob from "./sections/GlutterCanvas";
+import HistorySection from "./sections/HistorySection";
 import IntroSection from "./sections/IntroSection";
+import ProjectSection from "./sections/ProjectSection";
+import StackSection from "./sections/StackSection";
+import ValueSection from "./sections/ValueSection";
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
         <GlutterBlob />
         <div className="max-w-220 mx-auto">
           <IntroSection />
+          <HistorySection />
+          <ValueSection />
+          <StackSection />
+          <ProjectSection />
+          <ContactSection />
         </div>
       </div>
     </>

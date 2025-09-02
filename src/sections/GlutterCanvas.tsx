@@ -8,7 +8,6 @@ const simplex = createNoise4D();
 
 function Model() {
   const { viewport } = useThree();
-  console.log(viewport);
   const meshRef = useRef<THREE.Mesh>(null);
   const originalPositions = useRef<Float32Array | null>(null);
 
@@ -103,7 +102,7 @@ function Model() {
         </mesh>
       </group>
       <Text
-        // font="/font/GmarketSansTTFBold.ttf"
+        font="/font/GmarketSansTTFBold.ttf"
         fontSize={titleSize}
         color="white"
         anchorX="center"
@@ -112,7 +111,7 @@ function Model() {
         안녕하세요
       </Text>
       <Text
-        // font="/font/GmarketSansTTFBold.ttf"
+        font="/font/GmarketSansTTFBold.ttf"
         fontSize={subSize}
         color="gray"
         anchorX="center"
