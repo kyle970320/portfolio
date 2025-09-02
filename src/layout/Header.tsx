@@ -28,10 +28,6 @@ const headerItem = [
     id: "project_section",
   },
   {
-    title: "main",
-    id: "main_section",
-  },
-  {
     title: "contact",
     id: "contact_section",
   },
