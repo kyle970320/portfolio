@@ -1,23 +1,14 @@
 import { Typography } from "./../shared/Typography";
 const introList = [
   {
-    title: "부족해도 채우는사람",
-    desc: "나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1",
-    image: "/free1.jpg",
-  },
-  {
-    title: "부족해도 채우는사람",
-    desc: "나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1",
-    image: "/free1.jpg",
-  },
-  {
-    title: "부족해도 채우는사람",
-    desc: "나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1",
-    image: "/free1.jpg",
-  },
-  {
-    title: "부족해도 채우는사람",
-    desc: "나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1 나에 대한 설명입니다1",
+    title: "평범함을 강점으로",
+    desc: `안녕하세요. 프론트엔드 개발자 박민규 입니다.
+
+평소 논리적으로 말하는 것을 좋아하고, 이 때문에 다른 이와의 대화를 통해 생각의 차이를 좁혀 나가는 것을 좋아합니다. 
+높아진 이해를 바탕으로 다른 이가 읽기 쉬운 코드를 생각하며, 중복없는 코드를 짜기 위해 노력합니다.
+
+ui, ux를 가장 중요하게 생각하여 개발합니다.
+특별한 것도 좋지만 불특정 다수의 사용성 역시 매우 중요하게 생각합니다.`,
     image: "/free1.jpg",
   },
 ];
@@ -54,7 +45,9 @@ export default function IntroSection() {
                 <p className="text-xl text-white font-gmarket font-bold">
                   {title}
                 </p>
-                <Typography className="text-gray-300">{desc}</Typography>
+                <Typography className="text-gray-300 whitespace-pre-line">
+                  {desc}
+                </Typography>
               </div>
               {hasImage && (
                 <div className="relative w-[30%] max-w-[215px] min-w-[190px] aspect-square rounded-2xl overflow-hidden">

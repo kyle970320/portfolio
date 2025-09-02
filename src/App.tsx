@@ -25,8 +25,8 @@ function App() {
         <GlutterBlob />
         <div className="max-w-220 mx-auto">
           <IntroSection />
-          <HistorySection />
           <ValueSection />
+          <HistorySection />
           <StackSection />
           <ProjectSection />
           <ContactSection />

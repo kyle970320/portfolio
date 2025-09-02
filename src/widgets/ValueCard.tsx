@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Typography } from "../shared/Typography";
-import Modal from "../shared/Modal";
 
 interface Props {
   id: string;
@@ -8,7 +7,7 @@ interface Props {
   desc: string;
   color: string;
 }
-export default function ValueCard({ id, title, desc, color }: Props) {
+export default function ValueCard({ title, desc, color }: Props) {
   const [isMouse, setIsMouse] = useState<boolean>(false);
   const [position, setPosition] = useState<{
     x: number;
@@ -35,19 +34,14 @@ export default function ValueCard({ id, title, desc, color }: Props) {
     <div
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      className="relative flex flex-col flex-wrap justify-between p-5 w-[30%] max-w-[215px] min-w-[190px] rounded-2xl border-1 border-gray-400 aspect-square cursor-pointer overflow-hidden"
-      onClick={() => {
-        Modal.open({
-          detail: <>테스트 {id}</>,
-        });
-      }}
+      className="relative flex flex-col flex-wrap justify-between p-5 w-[30%] max-w-[215px] min-w-[190px] rounded-2xl border-1 border-gray-400 aspect-square overflow-hidden"
     >
       <div className="relative z-1 text-xl font-gmarket font-bold text-white">
         {title}
       </div>
       <div className=" relative z-1 text-gray-300">
         <div>
-          <Typography className="text-gray-300 mix-blend-color-dodge">
+          <Typography className="text-gray-200 mix-blend-color-dodge">
             {desc}
           </Typography>
         </div>

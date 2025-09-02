@@ -12,12 +12,12 @@ const headerItem = [
     id: "intro_section",
   },
   {
-    title: "History",
-    id: "history_section",
-  },
-  {
     title: "Value",
     id: "value_section",
+  },
+  {
+    title: "History",
+    id: "history_section",
   },
   {
     title: "Stack",

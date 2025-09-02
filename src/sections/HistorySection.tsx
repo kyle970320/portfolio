@@ -2,8 +2,17 @@ import { Typography } from "../shared/Typography";
 
 const historyData = [
   {
-    title: "데이터스케쳐스",
+    title: "(주)데이터스케쳐스",
     date: "2025",
+    desc: `Notion 기반 웹빌더 서비스 런칭 (sub job)
+    - 범용성 있는 템플릿 개발
+    - 내부 로직을 private한 라이브러리화
+    `,
+    images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
+  },
+  {
+    title: "(주)팜존에스엔씨",
+    date: "2024 ~ 재직중",
     desc: `업무내용입니다업무내용입니다업무내용입니다업무내용입니다업무내용입니다
 업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
 업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
@@ -12,18 +21,8 @@ const historyData = [
     images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
   },
   {
-    title: "아주 좋은 회사",
-    date: "2024",
-    desc: `업무내용입니다업무내용입니다업무내용입니다업무내용입니다업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다`,
-    images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
-  },
-  {
-    title: "조금 좋은 회사",
-    date: "2024",
+    title: "액트베이스 유한책임회사",
+    date: "2023 ~ 2024",
     desc: `업무내용입니다업무내용입니다업무내용입니다업무내용입니다업무내용입니다
 업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
 업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
@@ -61,8 +60,10 @@ export default function HistorySection() {
             <div className="w-[30%] text-right">{date}</div>
             <div className="w-[60%] flex flex-col gap-2">
               <div className="text-xl font-gmarket font-bold">{title}</div>
-              <div className="p-2 bg-[#06142b] rounded-xl">
-                <Typography className="text-gray-300">{desc}</Typography>
+              <div className="p-6 bg-[#06142b] rounded-xl">
+                <Typography className="text-gray-300 whitespace-pre-line">
+                  {desc}
+                </Typography>
               </div>
               <div className="flex gap-3">
                 {images.map((image, idx) => {

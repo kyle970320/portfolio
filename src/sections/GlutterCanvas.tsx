@@ -104,11 +104,11 @@ function Model() {
       <Text
         font="/font/GmarketSansTTFBold.ttf"
         fontSize={titleSize}
-        color="white"
+        color="rgb(18, 184, 134)"
         anchorX="center"
         anchorY="bottom"
       >
-        안녕하세요
+        평범한 개발자
       </Text>
       <Text
         font="/font/GmarketSansTTFBold.ttf"
@@ -117,7 +117,7 @@ function Model() {
         anchorX="center"
         anchorY="top"
       >
-        반갑습니다
+        박민규입니다
       </Text>
     </>
   );

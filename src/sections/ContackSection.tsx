@@ -2,8 +2,8 @@ import { Typography } from "../shared/Typography";
 import ContactCard from "../widgets/ContactCard";
 
 export default function ContactSection() {
-  const LogoLeft = "/free1.jpg";
-  const LogoRight = "/free1.jpg";
+  const LogoLeft = "/logo_white.png";
+  const LogoRight = "/logo_black.png";
   const descLeft = `Make
 Creactive
 Website
@@ -36,19 +36,21 @@ Website
           </div>
           <img
             src={LogoLeft}
-            width={20}
-            height={20}
             alt="logo"
-            className="w-10 h-10 rounded-xl mix-blend-exclusion"
+            className="w-15 h-15 rounded-xl mix-blend-exclusion"
+            style={{
+              objectFit: "contain",
+            }}
           />
         </ContactCard>
         <ContactCard className="flex flex-col justify-between w-55 aspect-5/9">
           <img
             src={LogoRight}
-            width={20}
-            height={20}
             alt="logo"
-            className="w-8 h-8 rounded-xl bg-amber-300"
+            className="w-15 h-15 rounded-xl bg-main"
+            style={{
+              objectFit: "contain",
+            }}
           />
           <Typography className="text-black font-bold">박민규</Typography>
           <div>
