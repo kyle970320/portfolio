@@ -37,18 +37,23 @@ const headerItem = [
   },
 ];
 export default function Header() {
-  const [headerBg, setHeaderBg] = useState<string>("bg-transparent");
+  const [headerBg, setHeaderBg] = useState<string>("bg-transparent opacity-30");
 
   useEffect(() => {
     const modifyBg = () => {
-      if (window.scrollY > 10) {
-        setHeaderBg("bg-[#ffffff5a] backdrop-blur-md");
+      const windowH = window.innerHeight;
+      if (window.scrollY > windowH - 20) {
+        setHeaderBg("bg-[#ffffff5a] backdrop-blur-md opacity-100");
       } else {
-        setHeaderBg("bg-transparent");
+        setHeaderBg("bg-transparent opacity-30");
       }
     };
     window.addEventListener("scroll", modifyBg);
-    return () => window.removeEventListener("scroll", modifyBg);
+    window.addEventListener("resize", modifyBg);
+    return () => {
+      window.removeEventListener("scroll", modifyBg);
+      window.removeEventListener("resize", modifyBg);
+    };
   }, []);
 
   return (
@@ -56,7 +61,7 @@ export default function Header() {
       <div
         className={`flex justify-center items-center gap-5 py-2 px-4 ${headerBg} rounded-2xl transition-all duration-100`}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           {headerItem.map((el, index) => {
             const key = `${el.title}_${index}`;
             return (
