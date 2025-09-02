@@ -47,7 +47,7 @@ Website
           <img
             src={LogoRight}
             alt="logo"
-            className="w-15 h-15 rounded-xl bg-main"
+            className="p-2 w-15 h-15 rounded-lg bg-main"
             style={{
               objectFit: "contain",
             }}
