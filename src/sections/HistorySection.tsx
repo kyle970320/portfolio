@@ -7,27 +7,26 @@ const historyData = [
     desc: `Notion 기반 웹빌더 서비스 런칭 (sub job)
     - 범용성 있는 템플릿 개발
     - 내부 로직을 private한 라이브러리화
+    - 300만원+ 수익 창출(진행중)
     `,
-    images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
+    images: ["/notion_logo.png", "/next_logo.jpg", "/free1.jpg"],
   },
   {
     title: "(주)팜존에스엔씨",
     date: "2024 ~ 재직중",
-    desc: `업무내용입니다업무내용입니다업무내용입니다업무내용입니다업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다`,
+    desc: `고객 소통용 어플, CMS 개발 / 외주 개발
+    - 한화비전 DesignPro 개발
+    - 사내 FE 컨벤션, 프로세스 적립
+    `,
     images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
   },
   {
     title: "액트베이스 유한책임회사",
     date: "2023 ~ 2024",
-    desc: `업무내용입니다업무내용입니다업무내용입니다업무내용입니다업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다 업무내용입니다 업무내용입니다 업무내용입니다
-업무내용입니다`,
+    desc: `외주 개발
+    - 아워홈 스마트팩토리 전환 디지털 클러스터 사업
+    - 풀무원 내부 HR 어플 유지 보수
+    `,
     images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
   },
 ];
@@ -52,7 +51,7 @@ export default function HistorySection() {
         <div className="w-full h-[2px] my-5 bg-gradient-to-r from-gray-500 via-gray-500 via-60% to-black" />
       </div>
       {historyData.map((el, index) => {
-        const { title, desc, date, images } = el;
+        const { title, desc, date } = el;
         const key = `${title}_${index}`;
 
         return (
@@ -61,31 +60,9 @@ export default function HistorySection() {
             <div className="w-[60%] flex flex-col gap-2">
               <div className="text-xl font-gmarket font-bold">{title}</div>
               <div className="p-6 bg-[#06142b] rounded-xl">
-                <Typography className="text-gray-300 whitespace-pre-line">
+                <Typography className="text-gray-200 whitespace-pre-line">
                   {desc}
                 </Typography>
-              </div>
-              <div className="flex gap-3">
-                {images.map((image, idx) => {
-                  const key = `${image}_${idx}`;
-                  return (
-                    <div
-                      key={key}
-                      className={`relative w-7 h-7 rounded-sm overflow-hidden`}
-                    >
-                      <img
-                        src={image}
-                        alt=""
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          objectPosition: "center center",
-                        }}
-                      />
-                    </div>
-                  );
-                })}
               </div>
             </div>
           </div>

@@ -3,9 +3,9 @@ import { Typography } from "../shared/Typography";
 
 const projectData = [
   {
-    title: "project1",
-    desc: "project 설명입니다 project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다",
-    image: "/free1.jpg",
+    title: "한화비전의 DesignPro",
+    desc: "DesignPro는 네트워크 제품 구성과 프로젝트 설계를 지원하는 웹 애플리케이션입니다. 프로젝트 생성, 지역 설정, 위치 지정, 용량 계산, 제품 비교, 데이터 시각화, 보고서 출력 등 프로젝트 관리에 필요한 주요 기능을 제공합니다.",
+    image: "/hanwha.png",
   },
   {
     title: "project2",
@@ -40,11 +40,11 @@ export default function ProjectCards() {
               });
             }}
           >
-            <div className="absolute z-1 inset-0 h-full w-full scale-110 rounded-xl bg-gradient-to-t from-[rgba(0,0,0,0.65)] via-[rgba(0,0,0,0.1)] to-transparent transition-all duration-200 group-hover:bg-[rgba(0,0,0,0.55)]" />
+            <div className="absolute z-1 inset-0 h-full w-full scale-110 rounded-xl bg-gradient-to-t from-[rgba(0,0,0,0.85)] via-[rgba(0,0,0,0.1)] to-transparent transition-all duration-200 group-hover:bg-[rgba(0,0,0,0.3)]" />
             <img
               src={image}
               alt=""
-              className="absolute object-cover object-center w-full h-full transition-all duration-200 group-hover:blur-lg"
+              className="absolute object-cover object-center w-full h-full transition-all duration-200 group-hover:blur-xs"
             />
             <div className="flex flex-col justify-end relative z-2 text-white p-4 h-full">
               <div className={`max-h-full relative top-0 overflow-hidden`}>

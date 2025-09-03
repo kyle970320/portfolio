@@ -9,7 +9,7 @@ const introList = [
 
 ui, ux를 가장 중요하게 생각하여 개발합니다.
 특별한 것도 좋지만 불특정 다수의 사용성 역시 매우 중요하게 생각합니다.`,
-    image: "/free1.jpg",
+    image: "/intro_1.png",
   },
 ];
 
