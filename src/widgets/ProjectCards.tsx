@@ -1,8 +1,10 @@
 import Modal from "../shared/Modal";
 import { Typography } from "../shared/Typography";
+import Hanwha from "./projects/Hanwha";
 
 const projectData = [
   {
+    id: "hanwha",
     title: "한화비전의 DesignPro",
     desc: "DesignPro는 네트워크 제품 구성과 프로젝트 설계를 지원하는 웹 애플리케이션입니다. 프로젝트 생성, 지역 설정, 위치 지정, 용량 계산, 제품 비교, 데이터 시각화, 보고서 출력 등 프로젝트 관리에 필요한 주요 기능을 제공합니다.",
     image: "/hanwha.png",
@@ -28,15 +30,20 @@ export default function ProjectCards() {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3">
       {projectData.map((el, index) => {
-        const { title, desc, image } = el;
+        const { id, title, desc, image } = el;
         const key = `${title}_${index}`;
         return (
           <div
             key={key}
             className="group relative flex flex-col justify-end h-[250px] cursor-pointer rounded-2xl overflow-hidden"
-            onClick={async () => {
+            onClick={() => {
+              const getCurrntDetail = () => {
+                if (id === "hanwha") {
+                  return <Hanwha />;
+                }
+              };
               Modal.open({
-                detail: <></>,
+                detail: getCurrntDetail(),
               });
             }}
           >
