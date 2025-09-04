@@ -21,12 +21,17 @@ export default function Modal({ detail, closeViewer }: Props) {
   });
 
   return createPortal(
-    <div className="fixed z-100 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-200 w-[calc(100vw-60px)] h-[calc(100vh-60px)] flex flex-col justify-center items-center bg-[#232323] text-white will-change-transform animate-viewerScaleUp">
-      <div className="flex justify-end w-full py-2 px-2" onClick={closeViewer}>
-        <X size={30} color="#777777" />
-      </div>
-      <div className="w-full h-full overflow-auto custom-view-scrollbar p-6">
-        {detail}
+    <div className="fixed z-99 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.4)] backdrop-blur-3xl top-0">
+      <div className="fixed z-100 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-250 w-[calc(100vw-60px)] h-[calc(100vh-60px)] flex flex-col justify-center items-center bg-transparent text-white will-change-transform animate-viewerScaleUp">
+        <div
+          className="flex justify-end w-full py-2 px-2"
+          onClick={closeViewer}
+        >
+          <X size={30} color="#AAAAAA" />
+        </div>
+        <div className="w-full h-full overflow-auto custom-view-scrollbar">
+          {detail}
+        </div>
       </div>
     </div>,
     document.getElementById("modal-root") as HTMLElement,
