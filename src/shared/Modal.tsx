@@ -27,7 +27,7 @@ export default function Modal({ detail, closeViewer }: Props) {
           className="flex justify-end w-full py-2 px-2"
           onClick={closeViewer}
         >
-          <X size={30} color="#AAAAAA" />
+          <X size={30} color="#AAAAAA" className="cursor-pointer" />
         </div>
         <div className="w-full h-full overflow-auto custom-view-scrollbar">
           {detail}
