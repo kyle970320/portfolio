@@ -22,7 +22,7 @@ export default function Hanwha() {
         }}
       >
         <div
-          className="flex justify-between h-[80%] p-10"
+          className="flex justify-between h-[77%] px-10 pt-8 pb-5"
           style={{
             background: "linear-gradient(180deg, #FFECE0 0%, #FEFEFE 100%)",
           }}
