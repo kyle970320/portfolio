@@ -1,6 +1,5 @@
 import WindowView from "../../../shared/WindowView";
 import Folder from "../../../shared/Folder";
-import ImageViewer from "../../../shared/ImageViewer";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
 export default function HanwhaMain() {
@@ -8,7 +7,7 @@ export default function HanwhaMain() {
     <ProjectWrapper
       className="mb-10"
       style={{
-        background: "linear-gradient(180deg, #FFECE0 0%, #FEFEFE 100%)",
+        background: "linear-gradient(180deg, #FFF6EA 0%, #FFFFFF 100%)",
       }}
     >
       <div className="flex justify-between gap-15 h-[77%] px-10 pt-8 pb-5">
@@ -40,21 +39,8 @@ export default function HanwhaMain() {
                   <WindowView
                     src="/hanwha_recorder.png"
                     className="w-[100%]"
-                    onClick={() => {
-                      ImageViewer.open({
-                        url: "/hanwha_recorder.png",
-                      });
-                    }}
                   />,
-                  <WindowView
-                    src="/hanwha.png"
-                    className="w-[100%]"
-                    onClick={() => {
-                      ImageViewer.open({
-                        url: "/hanwha.png",
-                      });
-                    }}
-                  />,
+                  <WindowView src="/hanwha.png" className="w-[100%]" />,
                 ]}
               />
             </div>

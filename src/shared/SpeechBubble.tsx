@@ -11,7 +11,7 @@ export default function SpeechBubble({ className, style, children }: Props) {
   );
   return (
     <div className={bubbleClassName} style={style}>
-      # {children}
+      {children}
     </div>
   );
 }

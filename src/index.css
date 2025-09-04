@@ -95,14 +95,15 @@
 .trapezoid-icon {
   position: absolute;
   z-index: 20;
-  top: -100px;
-  left: 230px;
+  top: 30px;
+  left: 50%;
   display: inline-block;
-  width: 250px;
+  width: 550px;
   border-bottom: 550px solid rgba(255, 255, 255, 0.4);
-  border-left: 110px solid transparent;
-  border-right: 110px solid transparent;
-  rotate: 60deg;
+  border-left: 280px solid transparent;
+  border-right: 280px solid transparent;
+  rotate: 0deg;
+  translate: -50%;
 }
 .custom-view-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(116, 126, 135, 1);
