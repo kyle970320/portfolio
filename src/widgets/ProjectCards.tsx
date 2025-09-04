@@ -1,6 +1,6 @@
 import Modal from "../shared/Modal";
 import { Typography } from "../shared/Typography";
-import Hanwha from "./projects/Hanwha";
+import Hanwha from "./projects/hanwha/Hanwha";
 
 const projectData = [
   {
