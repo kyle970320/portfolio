@@ -11,7 +11,7 @@ export default function HanwhaMain() {
         background: "linear-gradient(180deg, #FFECE0 0%, #FEFEFE 100%)",
       }}
     >
-      <div className="flex justify-between h-[23%] px-10 pt-8 pb-5">
+      <div className="flex justify-between gap-15 h-[77%] px-10 pt-8 pb-5">
         <div>
           <p>
             <span className="inline-block bg-black py-0.5 px-2 text-white text-sm rounded-2xl">
@@ -30,71 +30,69 @@ export default function HanwhaMain() {
             Design Pro시스템: Re-engineering
           </p>
         </div>
-        <div className="flex gap-6 px-10">
-          <div>
-            <p className="text-[#563C22] text-sm font-bold">프로젝트 개요</p>
-            <div className="flex items-baseline gap-1">
-              <span className="inline-block text-xs text-black font-semibold">
-                기간
-              </span>
-              <span className="text-[11px] text-gray-600">
-                2024.04 ~ 진행중
-              </span>
+        <div className="mx-auto pb-5 w-[60%] flex justify-center">
+          <div className="relative w-full h-full">
+            <div className="flex justify-center items-end rounded-b-[50%] h-full bg-gradient-to-t from-[#FFDFC6] via-[#FFDFC6] via-10% to-transparent overflow-clip">
+              <Folder
+                color="#ffbf96"
+                size={2.5}
+                items={[
+                  <WindowView
+                    src="/hanwha_recorder.png"
+                    className="w-[100%]"
+                    onClick={() => {
+                      ImageViewer.open({
+                        url: "/hanwha_recorder.png",
+                      });
+                    }}
+                  />,
+                  <WindowView
+                    src="/hanwha.png"
+                    className="w-[100%]"
+                    onClick={() => {
+                      ImageViewer.open({
+                        url: "/hanwha.png",
+                      });
+                    }}
+                  />,
+                ]}
+              />
             </div>
-            <div className="flex items-baseline gap-1">
-              <span className="inline-block text-xs text-black font-semibold">
-                기여도
-              </span>
-              <span className="text-[11px] text-gray-600">
-                FE: 5명 / BE:2 명/ 35%
-              </span>
+            <div className="absolute top-[75%] left-[-10%] inline-block bg-[#C49664] px-2 text-white text-lg rounded-2xl shadow-xl">
+              # 전문적인 Flow
             </div>
-          </div>
-          <div>
-            <p className="text-[#563C22] text-sm font-bold">참여 기능</p>
-            <div className="text-[11px] text-gray-700 whitespace-pre-line">
-              {`- 데이터 저장 : IndexedDB를 활용해 개인 브라우저에 데이터 저장 
-              - 위치 지정 : Google Map을 활용해 프로젝트 위치 지정 기능 개발 설정
-              - 복사/이동 : 프로젝트 설정을 export/import하여 PC간 이동 제품
-              - 데이터 시각화 : 프로젝트에 등록된 제품 정보를 차트로 시각화 제품
-              - 비교 : 선택한 제품들의 주요 정보를 비교할 수 있는 테이블 제공`}
+            <div className="absolute top-[85%] inline-block bg-white px-2 text-[#C49664] text-lg rounded-2xl shadow-xl">
+              # api 통신 최소화
             </div>
           </div>
         </div>
       </div>
-      <div className="mx-auto pt-20 pb-5 w-[55%] h-[77%] flex justify-center">
-        <div className="relative w-full h-full">
-          <div className="flex justify-center items-end rounded-b-[50%] h-full bg-gradient-to-t from-[#FFDFC6] via-[#FFDFC6] via-10% to-transparent overflow-clip">
-            <Folder
-              color="#ffbf96"
-              size={2.5}
-              items={[
-                <WindowView
-                  src="/hanwha_recorder.png"
-                  className="w-[100%]"
-                  onClick={() => {
-                    ImageViewer.open({
-                      url: "/hanwha_recorder.png",
-                    });
-                  }}
-                />,
-                <WindowView
-                  src="/hanwha.png"
-                  className="w-[100%]"
-                  onClick={() => {
-                    ImageViewer.open({
-                      url: "/hanwha.png",
-                    });
-                  }}
-                />,
-              ]}
-            />
+      <div className="flex gap-6 px-10">
+        <div>
+          <p className="text-[#563C22] text-sm font-bold">프로젝트 개요</p>
+          <div className="flex items-baseline gap-1">
+            <span className="inline-block text-xs text-black font-semibold">
+              기간
+            </span>
+            <span className="text-[11px] text-gray-600">2024.04 ~ 진행중</span>
           </div>
-          <div className="absolute top-[75%] left-[-10%] inline-block bg-[#C49664] px-2 text-white text-lg rounded-2xl shadow-xl">
-            # 전문적인 Flow
+          <div className="flex items-baseline gap-1">
+            <span className="inline-block text-xs text-black font-semibold">
+              기여도
+            </span>
+            <span className="text-[11px] text-gray-600">
+              FE: 5명 / BE:2 명/ 35%
+            </span>
           </div>
-          <div className="absolute top-[85%] inline-block bg-white px-2 text-[#C49664] text-lg rounded-2xl shadow-xl">
-            # api 통신 최소화
+        </div>
+        <div>
+          <p className="text-[#563C22] text-sm font-bold">참여 기능</p>
+          <div className="text-[11px] text-gray-700 whitespace-pre-line">
+            {`- 데이터 저장 : IndexedDB를 활용해 개인 브라우저에 데이터 저장 
+              - 위치 지정 : Google Map을 활용해 프로젝트 위치 지정 기능 개발 설정
+              - 복사/이동 : 프로젝트 설정을 export/import하여 PC간 이동 제품
+              - 데이터 시각화 : 프로젝트에 등록된 제품 정보를 차트로 시각화 제품
+              - 비교 : 선택한 제품들의 주요 정보를 비교할 수 있는 테이블 제공`}
           </div>
         </div>
       </div>

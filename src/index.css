@@ -92,6 +92,18 @@
     left: 22%;
   }
 }
+.trapezoid-icon {
+  position: absolute;
+  z-index: 20;
+  top: -100px;
+  left: 230px;
+  display: inline-block;
+  width: 250px;
+  border-bottom: 550px solid rgba(255, 255, 255, 0.4);
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  rotate: 60deg;
+}
 .custom-view-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(116, 126, 135, 1);
 }
@@ -198,5 +210,31 @@ body * {
     width: 0px;
     height: 0px;
     scale: 1;
+  }
+}
+
+@keyframes posUp {
+  0% {
+    top: 0px;
+    scale: 1;
+  }
+  100% {
+    top: -10px;
+    scale: 1.02;
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+  10% {
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+  20% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
   }
 }
