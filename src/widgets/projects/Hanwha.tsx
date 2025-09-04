@@ -39,10 +39,11 @@ export default function Hanwha() {
             <img
               src="/hanwha_logo.webp"
               alt=""
-              className="my-5 w-65 h-8 object-cover object-center"
+              className="mt-4 mb-2 w-65 h-8 object-cover object-center"
             />
-            <p className="text-2xl font-bold">DesignPro시스템</p>
-            <p className="text-2xl font-bold">Re-engineering</p>
+            <p className="text-xl font-semibold">
+              Design Pro시스템: Re-engineering
+            </p>
           </div>
           <div className="w-[55%] flex flex-col justify-center">
             <div className="relative h-full">
