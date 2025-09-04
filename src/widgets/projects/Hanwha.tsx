@@ -39,7 +39,7 @@ export default function Hanwha() {
             <img
               src="/hanwha_logo.webp"
               alt=""
-              className="mt-4 mb-2 w-65 h-8 object-cover object-center"
+              className="mt-6 mb-2 w-68 h-12 object-cover object-center"
             />
             <p className="text-xl font-semibold">
               Design Pro시스템: Re-engineering
