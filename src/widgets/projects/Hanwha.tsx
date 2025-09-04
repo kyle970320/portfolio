@@ -73,15 +73,15 @@ export default function Hanwha() {
                 />
               </div>
               <div className="absolute top-[75%] left-[-10%] inline-block bg-[#C49664] px-2 text-white text-lg rounded-2xl shadow-xl">
-                # 전문적인
+                # 전문적인 Flow
               </div>
               <div className="absolute top-[85%] inline-block bg-white px-2 text-[#C49664] text-lg rounded-2xl shadow-xl">
-                # 효율적인
+                # api 통신 최소화
               </div>
             </div>
           </div>
         </div>
-        <div className="flex gap-5 px-4">
+        <div className="flex gap-6 px-10">
           <div>
             <p className="text-[#563C22] text-sm font-bold">프로젝트 개요</p>
             <div className="flex items-baseline gap-1">
