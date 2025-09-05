@@ -1,0 +1,73 @@
+import { ChevronsRight } from "lucide-react";
+import ProjectWrapper from "../ui/ProjectWrapper";
+import DsketExample from "./../ui/DsketExample";
+
+export default function DsketDesc() {
+  return (
+    <ProjectWrapper
+      className="mb-10"
+      style={{
+        background: "linear-gradient(180deg, #fff3d6 0%, #FFFFFF 100%)",
+      }}
+    >
+      <div className="relative flex flex-col h-full justify-center items-center overflow-hidden">
+        <div className="relative w-[78%]">
+          <p className="text-[#e6a607] text-center font-bold">
+            프로젝트에 대하여
+          </p>
+          <p className="text-2xl text-center font-bold mt-3 mb-3">
+            Notion 기반의 간편한 웹빌더를 제공해요
+          </p>
+          <div className="mt-5 text-gray-700 text-sm text-center">
+            <p>
+              Dsket은 Notion에서 데이터를 연동해서 웹사이트를 발행해주는
+              서비스입니다.
+            </p>
+            <p>
+              사용자는 원하는 내용을 삽입 변경하며, 이 내용이 실시간으로
+              웹사이트에 반영됩니다.
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center relative w-[75%] mt-10">
+          <div className="flex flex-wrap justify-center items-center w-[45%] gap-1">
+            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-br-md border-r-2 border-b-2 border-gray-500">
+              제목
+            </div>
+            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-800">
+              내용
+            </div>
+            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-bl-md border-l-2 border-b-2 border-gray-800">
+              배경타입
+            </div>
+            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-tr-md border-r-2 border-t-2 border-gray-800">
+              평범한 개발자
+            </div>
+            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-t-md border-l-2 border-r-2 border-t-2 border-gray-800">
+              박민규입니다
+            </div>
+            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-tl-md border-l-2 border-t-2 border-gray-800">
+              Blob
+            </div>
+            <div className="w-full mt-3">
+              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
+            </div>
+            <div className="w-full mt-3">
+              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
+            </div>
+            <div className="w-full mt-3">
+              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
+            </div>
+          </div>
+
+          <div className="w-[4%]">
+            <ChevronsRight />
+          </div>
+          <div className="w-[45%] h-60">
+            <DsketExample />
+          </div>
+        </div>
+      </div>
+    </ProjectWrapper>
+  );
+}

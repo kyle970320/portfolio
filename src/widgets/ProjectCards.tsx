@@ -1,18 +1,20 @@
 import Modal from "../shared/Modal";
 import { Typography } from "../shared/Typography";
+import Dsket from "./projects/dsket/Dsket";
 import Hanwha from "./projects/hanwha/Hanwha";
 
 const projectData = [
+  {
+    id: "dsket",
+    title: "D-sket",
+    desc: "project 설명입니다 project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다",
+    image: "/dsket_thumb.png",
+  },
   {
     id: "hanwha",
     title: "한화비전의 DesignPro",
     desc: "DesignPro는 네트워크 제품 구성과 프로젝트 설계를 지원하는 웹 애플리케이션입니다. 프로젝트 생성, 지역 설정, 위치 지정, 용량 계산, 제품 비교, 데이터 시각화, 보고서 출력 등 프로젝트 관리에 필요한 주요 기능을 제공합니다.",
     image: "/hanwha.png",
-  },
-  {
-    title: "project2",
-    desc: "project 설명입니다 project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다",
-    image: "/free1.jpg",
   },
   {
     title: "project3",
@@ -38,6 +40,9 @@ export default function ProjectCards() {
             className="group relative flex flex-col justify-end h-[250px] cursor-pointer rounded-2xl overflow-hidden"
             onClick={() => {
               const getCurrntDetail = () => {
+                if (id === "dsket") {
+                  return <Dsket />;
+                }
                 if (id === "hanwha") {
                   return <Hanwha />;
                 }

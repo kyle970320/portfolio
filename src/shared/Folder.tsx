@@ -121,9 +121,9 @@ export default function Folder({
           {papers.map((item, i) => {
             let sizeClasses = "";
             if (i === 0)
-              sizeClasses = open ? "w-[100%] h-[90%]" : "w-[90%] h-[80%]";
+              sizeClasses = open ? "w-[100%] h-[88%]" : "w-[90%] h-[80%]";
             if (i === 1)
-              sizeClasses = open ? "w-[100%] h-[90%]" : "w-[90%] h-[70%]";
+              sizeClasses = open ? "w-[100%] h-[88%]" : "w-[90%] h-[70%]";
 
             const transformStyle = open
               ? `${getOpenTransform(i)} translate(${paperOffsets[i].x}px, ${paperOffsets[i].y}px)`
