@@ -41,7 +41,7 @@ export default function DsketMain() {
                 size={2.5}
                 items={[
                   <WindowView
-                    src="/dsket_detail.png"
+                    src="/dsket_home.png"
                     className="w-[100%] h-full"
                   />,
                   <WindowView
