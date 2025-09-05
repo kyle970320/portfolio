@@ -30,68 +30,43 @@ export default function DsketDesc() {
           </div>
         </div>
         <div className="flex justify-between items-center relative w-[75%] mt-10">
-          {/* <div className="flex flex-wrap justify-center items-center w-[45%] gap-1 bg-white py-11">
-            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-br-md border-r-2 border-b-2 border-gray-500">
-              제목
-            </div>
-            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-800">
-              내용
-            </div>
-            <div className="w-[30%] p-2 text-base text-center font-semibold rounded-bl-md border-l-2 border-b-2 border-gray-800">
-              배경타입
-            </div>
-            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-tr-md border-r-2 border-t-2 border-gray-800">
-              평범한 개발자
-            </div>
-            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-t-md border-l-2 border-r-2 border-t-2 border-gray-800">
-              박민규입니다
-            </div>
-            <div className="w-[30%] p-2 text-sm text-center font-semibold rounded-tl-md border-l-2 border-t-2 border-gray-800">
-              Blob
-            </div>
-            <div className="w-full mt-3">
-              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
-            </div>
-            <div className="w-full mt-3">
-              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
-            </div>
-            <div className="w-full mt-3">
-              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
-            </div>
-          </div> */}
-          <div className="relative flex flex-col w-[45%] bg-[#ffc] shadow-xl p-5">
+          <div className="relative flex flex-col w-[45%] bg-[#ffc] shadow-xl py-7 px-5">
             <img
               src="/notion_logo.png"
               alt=""
-              className="absolute w-30 top-[-30px] right-[-50px]"
+              className="absolute w-26 top-[-32px] left-[-46px]"
             />
-            <div className="border-b-1 w-full font-bold text-sm py-0.5">
+            <div className="border-b-1 font-bold text-sm py-0.5 mr-16">
               제목
             </div>
-            <div className="border-b-1 text-sm py-0.5">평범한 개발자</div>
-            <div className="border-b-1 font-bold text-sm py-0.5">부제목</div>
-            <div className="border-b-1 text-sm py-0.5">박민규입니다</div>
-            <div className="border-b-1 font-bold text-sm py-0.5">배경타입</div>
-            <div className="border-b-1 text-sm py-0.5">Blob</div>
+            <div className="border-b-1 text-sm py-0.5 mr-16">평범한 개발자</div>
+            <div className="border-b-1 font-bold text-sm py-0.5 mr-16">
+              부제목
+            </div>
+            <div className="border-b-1 text-sm py-0.5  mr-8">박민규입니다</div>
+            <div className="border-b-1 font-bold text-sm py-0.5 mr-8">
+              배경타입
+            </div>
+            <div className="border-b-1 text-sm py-0.5 mr-8">Blob</div>
             <div className="w-full mt-3">
               <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
             </div>
             <div className="w-full mt-3">
-              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
+              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700 opacity-80"></div>
             </div>
             <div className="w-full mt-3">
-              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700"></div>
+              <div className="mx-auto w-1.5 h-1.5 rounded-2xl bg-gray-700 opacity-60"></div>
             </div>
           </div>
 
           <div className="w-[4%]">
             <ChevronsRight size={30} />
           </div>
-          <div className="w-[45%] h-60">
+          <div className="relative w-[45%] h-65">
             <img
               src="/chrome_logo.png"
               alt=""
-              className="absolute z-1000 w-17 top-[-28px] right-[-30px]"
+              className="absolute z-1000 w-14 top-[-30px] left-[-28px]"
             />
             <DsketExample />
           </div>
