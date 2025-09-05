@@ -8,6 +8,7 @@ import {
   CornerUpRight,
   MoveHorizontal,
   MoveVertical,
+  X,
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
@@ -127,14 +128,6 @@ export default function ImageViewer({ url, closeViewer }: Props) {
     handleImageScale("scale", "X", newZoomX);
     handleImageScale("scale", "Y", newZoomY);
   };
-
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  });
 
   useEffect(() => {
     if (isMouseHold) {
@@ -292,11 +285,17 @@ export default function ImageViewer({ url, closeViewer }: Props) {
     >
       <div className="relative w-[300px] h-[240px] md:w-[800px] md:h-[650px]">
         <div
+          className="relative z-100 flex justify-end w-full py-2 px-2"
+          onClick={closeViewer}
+        >
+          <X size={30} color="#FFFFFF" className="cursor-pointer" />
+        </div>
+        <div
           ref={imageContentRef}
           onMouseDown={(e) => {
             e.stopPropagation();
           }}
-          className="relative w-full h-full backface-visible transform-3d image-viewer-transition"
+          className="relative flex justify-center items-center w-full h-full backface-visible transform-3d image-viewer-transition"
           style={{
             transform: `translate3d(${imageTranslate.X}px, ${imageTranslate.Y}px, ${imageTranslate.Z}px)`,
             // rotate에 transition 적용
@@ -312,6 +311,8 @@ export default function ImageViewer({ url, closeViewer }: Props) {
             alt=""
             draggable={false}
             style={{
+              width: "100%",
+              height: "100%",
               objectFit: "contain",
               cursor: isMouseHold ? "grabbing" : "grab",
             }}

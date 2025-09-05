@@ -1,3 +1,5 @@
+import ImageViewer from "../../../shared/ImageViewer";
+import SpeechBubble from "../../../shared/SpeechBubble";
 import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
@@ -59,8 +61,36 @@ export default function DsketConnectNotion() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-start p-8 w-7/10 h-full bg-[#F7F2EA]">
-          <WindowWrapper src="/dsket_connect.png" />
+        <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#F7F2EA] overflow-hidden">
+          <SpeechBubble className="absolute top-22 left-5 h-20 w-45 after:!hidden">
+            <div className="text-sm font-semibold">
+              <p>server-only 로직으로</p>
+              <p>보안값들을 안전하게 처리</p>
+            </div>
+          </SpeechBubble>
+          <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 left-49.5 rotate-313" />
+          <SpeechBubble className="absolute top-10 h-20 w-48 after:!hidden">
+            <div className="text-sm font-semibold">
+              <p>선택된 템플릿에 맞춰</p>
+              <p>데이터 타입 매핑</p>
+            </div>
+          </SpeechBubble>
+          <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 right-49.5 rotate-223" />
+          <SpeechBubble className="absolute top-22 right-5 h-20 w-45 after:!hidden">
+            <div className="text-sm font-semibold">
+              <p>block type에 맞춰</p>
+              <p>디자인 컴포넌트 render</p>
+            </div>
+          </SpeechBubble>
+          <WindowWrapper
+            className="relative top-40 w-[55%]"
+            src="/dsket_connect.png"
+            onClick={() => {
+              ImageViewer.open({
+                url: "/dsket_connect.png",
+              });
+            }}
+          />
         </div>
       </div>
     </ProjectWrapper>
