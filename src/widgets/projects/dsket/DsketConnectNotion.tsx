@@ -16,11 +16,11 @@ export default function DsketConnectNotion() {
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
             Point 1
           </p>
-          <div className="text-xl text-white">
+          <div className="text-xl text-white font-bold">
             <p>Notion 데이터 연동</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>API Key 보안 처리</p>
+            <p className="font-semibold">API Key 보안 처리</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -30,7 +30,7 @@ export default function DsketConnectNotion() {
             </p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>Block Renderer 개발</p>
+            <p className="font-semibold">Block Renderer 개발</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -45,7 +45,7 @@ export default function DsketConnectNotion() {
             </p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>Type Mapper 개발</p>
+            <p className="font-semibold">Type Mapper 개발</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -61,7 +61,7 @@ export default function DsketConnectNotion() {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#F7F2EA] overflow-hidden">
+        <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
           <SpeechBubble className="absolute top-22 left-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
               <p>server-only 로직으로</p>

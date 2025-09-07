@@ -16,11 +16,11 @@ export default function DsketSEO() {
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
             Point 2
           </p>
-          <div className="text-xl text-white">
+          <div className="text-xl text-white font-bold">
             <p>SEO 최적화</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>SSR 기반 페이지 렌더링</p>
+            <p className="font-semibold">SSR 기반 페이지 렌더링</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -29,7 +29,7 @@ export default function DsketSEO() {
             </p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>메타 태그 커스텀 생성</p>
+            <p className="font-semibold">메타 태그 커스텀 생성</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -44,7 +44,7 @@ export default function DsketSEO() {
             </p>
           </div>
         </div>
-        <div className="relative flex items-center justify-between p-10 w-7/10 h-full bg-[#F7F2EA] overflow-hidden">
+        <div className="relative flex items-center justify-between p-10 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
           <WindowWrapper
             className="relative w-[50%]"
             src="/dsket_seo.png"

@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Circle, CodeXml, Github, X } from "lucide-react";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
 export default function DsketLibrary() {
@@ -14,11 +14,11 @@ export default function DsketLibrary() {
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
             Point 3
           </p>
-          <div className="text-xl text-white">
+          <div className="text-xl text-white font-bold">
             <p>내부 로직 라이브러리화</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>GitLab Package Registry 활용</p>
+            <p className="font-semibold">GitLab Package Registry 활용</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -31,7 +31,7 @@ export default function DsketLibrary() {
             </p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p>아키텍처 선택</p>
+            <p className="font-semibold">아키텍처 선택</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
@@ -52,21 +52,54 @@ export default function DsketLibrary() {
             </p>
           </div>
         </div>
-        <div className="relative flex items-stretch justify-between p-10 w-7/10 h-full bg-[#F7F2EA] overflow-hidden">
-          <div className="flex flex-col items-center py-4 w-[30%] bg-white rounded-2xl">
+        <div className="relative flex items-stretch justify-between p-10 w-7/10 h-full bg-[#fefcec] overflow-hidden">
+          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-red-500">
             <div className="font-semibold">서브모듈</div>
             <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <Github size={48} />
+              <CodeXml size={48} />
             </div>
-          </div>
-          <div className="flex flex-col items-center py-4 w-[30%] bg-white rounded-2xl">
-            <div className="font-semibold">모노레포</div>
+            <div className="border-r-3 mt-2 border-dashed h-24" />
+            <div className="flex flex-col items-center w-6/10">
+              <X size={30} color="red" />
+              <p className="text-xs text-red-500 text-center font-semibold">
+                <p>러닝 커브 높음</p>
+                <p>하위 - 상위 접근 힘듬</p>
+              </p>
+            </div>
             <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
               <Github size={48} />
             </div>
           </div>
-          <div className="flex flex-col items-center py-4 w-[30%] bg-white rounded-2xl">
+          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-red-500">
+            <div className="font-semibold">모노레포</div>
+            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
+              <CodeXml size={48} />
+            </div>
+            <div className="border-r-3 mt-2 border-dashed h-24" />
+            <div className="flex flex-col items-center w-6/10">
+              <X size={30} color="red" />
+              <p className="text-xs text-red-500 text-center font-semibold">
+                <p>프로젝트 볼륨 커짐</p>
+                <p>커밋기록 관리 힘듬</p>
+              </p>
+            </div>
+            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
+              <Github size={48} />
+            </div>
+          </div>
+          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-[#12b886]">
             <div className="font-semibold">패키지</div>
+            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
+              <CodeXml size={48} />
+            </div>
+            <div className="border-r-3 mt-2 border-dashed h-24" />
+            <div className="flex flex-col items-center w-6/10">
+              <Circle size={24} color="#12b886" className="mt-1 mb-0.5" />
+              <p className="text-xs text-main text-center font-semibold">
+                <p>연결, 분리 쉬움</p>
+                <p>독립적으로 관리 가능</p>
+              </p>
+            </div>
             <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
               <Github size={48} />
             </div>
