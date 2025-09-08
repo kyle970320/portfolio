@@ -20,8 +20,8 @@ const projectData = [
   {
     id: "minus",
     title: "Minus",
-    desc: "project 설명입니다 project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다",
-    image: "/free1.jpg",
+    desc: "Minus는 개발 경험, 학습 기록, 개인적인 생각을 체계적으로 정리하고 공유하기 위한 블로그 기반 플랫폼입니다. 블로그는 Component, Study, Article 세 가지 카테고리로 구성되며배포한 UI 라이브러리(Minus-ui)의 문서 역할도 함께 수행합니다. UI 라이브러리는 모노레포 구조로 구성되어 있으며, 필요한 패키지만 선택설치하거나 core 패키지로 일괄 사용이 가능합니다. 블로그는 AWS S3와 CloudFront로 배포되며 GitHub Actions 기반 CI/CD가 적용되어 있습니다.",
+    image: "/minus_thumb.png",
   },
   {
     title: "project4",
