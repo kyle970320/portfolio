@@ -19,79 +19,33 @@ export default function MinusDesc() {
           </p>
           <div className="mt-5 text-gray-700 text-sm text-center">
             <p>
-              DesignPro는 네트워크 제품 구성과 프로젝트 설계를 지원하는 웹
-              애플리케이션입니다.🤔
+              Minus는 기존 라이브러리의 구조적인 성능 저하 문제와 기능 부재를
+              느끼고,
             </p>
             <p>
-              프로젝트 생성, 지역 설정, 위치 지정, 용량 계산, 제품 비교, 데이터
-              시각화, 리포팅 등 네트워크 관리에 주요 기능을 제공합니다.
+              쉽고 빠르게 사용할 수 없을까라는 생각에서 출발한 개발 친화적인 UI
+              라이브러리입니다.
+            </p>
+            <p>
+              이에 그치지 않고 Docs의 역할을 할 수 있는 blog를 만들어서 내용을
+              공유하고 있습니다.
             </p>
           </div>
         </div>
-        <div className="relative flex w-[60%] h-50 flex-wrap gap-10 justify-center mt-10">
-          <div className="relative mt-6 w-[100%] h-50 rounded-b-[50%] overflow-clip">
-            <SpeechBubble className="absolute bottom-3 left-18 text-white bg-[#8a7139] after:border-t-[#8a7139]">
-              이전 화면들은 가독성이 부족해요
+        <div className="relative flex w-[60%] h-50 flex-wrap justify-center mt-10">
+          <div className="relative mt-18 w-full h-0">
+            <SpeechBubble className="absolute top-0 left-12 text-white bg-[#397e49] after:border-t-[#397e49] rotate-[-12deg] bubble-tail-none">
+              말줄임이 일어났을때만 Tooltip을 표시하고 싶어요
             </SpeechBubble>
-            <SpeechBubble className="absolute bottom-25 left-22 text-white bg-[#cfaf8d] after:border-t-[#cfaf8d]">
-              다른 기능들을 추가하고 싶어요
+            <SpeechBubble className="absolute z-1 top-[-60px] left-54 text-white bg-[#397e49] after:border-t-[#397e49] bubble-tail-none">
+              같은 Dom에서 위치를 잡고 싶어요
             </SpeechBubble>
-            <SpeechBubble className="absolute bottom-13 left-52 text-white bg-[#a88055] after:border-t-[#a88055]">
-              예전에 만들었기에 유지보수가 힘들어요
-            </SpeechBubble>
-            <SpeechBubble className="absolute bottom-[-4px] left-68 text-white bg-[#7d5f3f] after:border-t-[#7d5f3f]">
-              새로운 제품들이 많이 추가되었어요
-            </SpeechBubble>
-            <SpeechBubble className="absolute bottom-25 left-94 text-white bg-[#cfa273] after:border-t-[#cfa273]">
-              다른 시스템들과도 연동하고 싶어요
-            </SpeechBubble>
-            <SpeechBubble className="absolute bottom-7 left-108 text-white bg-[#C49664] after:border-t-[#C49664]">
-              여러 지역으로 서비스를 확장하고 싶어요
+            <SpeechBubble className="absolute top-0 left-96 text-white bg-[#397e49] after:border-t-[#397e49] rotate-12 bubble-tail-none">
+              너무 많은 rendering 때문에 성능이 저하되요!
             </SpeechBubble>
           </div>
+          <div className="text-[110px]">🤔</div>
         </div>
-        {/* <div className="flex w-[70%] flex-wrap gap-10 justify-center mt-10">
-          <SpeechBubble
-            style={{
-              animation: "posUp alternate infinite 1s",
-            }}
-            className="text-white bg-[#C49664] after:border-t-[#C49664]"
-          >
-            이전 화면들은 가독성이 부족해요
-          </SpeechBubble>
-          <SpeechBubble
-            style={{
-              animation: "posUp alternate infinite 1s 1.1s",
-            }}
-            className="text-white bg-[#C49664] after:border-t-[#C49664]"
-          >
-            새로운 기능들을 추가하고 싶어요
-          </SpeechBubble>
-          <SpeechBubble
-            style={{
-              animation: "posUp alternate infinite 1s",
-            }}
-            className="text-white bg-[#C49664] after:border-t-[#C49664]"
-          >
-            예전에 만들었기에 유지보수가 힘들어요
-          </SpeechBubble>
-          <SpeechBubble
-            style={{
-              animation: "posUp alternate infinite 1s 1.1s",
-            }}
-            className="text-white bg-[#C49664] after:border-t-[#C49664]"
-          >
-            새로운 제품들이 많이 추가되었어요
-          </SpeechBubble>
-          <SpeechBubble
-            style={{
-              animation: "posUp alternate infinite 1s 1.1s",
-            }}
-            className="text-white bg-[#C49664] after:border-t-[#C49664]"
-          >
-            다른 시스템들과도 연동하고 싶어요
-          </SpeechBubble>
-        </div> */}
       </div>
     </ProjectWrapper>
   );

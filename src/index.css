@@ -91,6 +91,22 @@
     top: 99%;
     left: 22%;
   }
+  .bubble-tail-right::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: "";
+    position: absolute;
+    top: 99%;
+    left: 72%;
+  }
+  .bubble-tail-none::after {
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 99%;
+    left: 72%;
+  }
 }
 .trapezoid-icon {
   position: absolute;
