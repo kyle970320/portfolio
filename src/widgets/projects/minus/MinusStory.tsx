@@ -26,7 +26,7 @@ export default function MinusStory() {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col gap-3 items-center p-8 w-full h-full bg-[#e8faec] overflow-hidden">
+        <div className="relative flex flex-col gap-3 items-center p-8 w-full h-full bg-[#eef8ef] overflow-hidden">
           <iframe
             src="https://d2gt38x81vtxw2.cloudfront.net/frame/snackbar/mini"
             width={700}

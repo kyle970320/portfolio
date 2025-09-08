@@ -35,7 +35,7 @@ export default function DsketLibrary() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                서브모듈: 커밋 기록 관리 복잡 → 제외
+                서브모듈: 의존성 동기화 문제, 학습곡선 가파름 → 제외
               </span>
             </p>
             <p className="mt-1 text-xs flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function DsketLibrary() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                패키지 레지스트리: 독립적 관리 + 확장성 → 최종 선택
+                패키지 레지스트리: 독립적 관리 + 확장성까지 → 최종 선택
               </span>
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function DsketLibrary() {
               <X size={30} color="red" />
               <p className="text-xs text-red-500 text-center font-semibold">
                 <p>러닝 커브 높음</p>
-                <p>하위 - 상위 접근 힘듬</p>
+                <p>본 repo와 동기화 필요</p>
               </p>
             </div>
             <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">

@@ -1,3 +1,4 @@
+import SpeechBubble from "../../../shared/SpeechBubble";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
 export default function MinusMonorepo() {
@@ -26,8 +27,8 @@ export default function MinusMonorepo() {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col gap-3 items-center p-8 w-full h-full bg-[#e8faec] overflow-hidden">
-          <div className=" text-slate-900">
+        <div className="relative flex flex-col gap-3 p-8 w-full h-full bg-[#eef8ef] overflow-hidden">
+          <div className="text-slate-900">
             <div className="mx-auto max-w-4xl p-6">
               <h1 className="text-xl font-bold mb-4">minus-ui 구조</h1>
 
@@ -51,7 +52,7 @@ export default function MinusMonorepo() {
                             <span className="mr-2">📁</span>
                             <span className="font-medium">component</span>/
                             <span className="ml-2 text-xs text-slate-500">
-                              # @minus-ui/component (UI Components)
+                              # @minus-ui/component (UI)
                             </span>
                           </div>
 
@@ -287,6 +288,18 @@ export default function MinusMonorepo() {
               </ul>
             </div>
           </div>
+          <SpeechBubble className="absolute flex-col items-start w-50 z-1 top-55 right-10 h-38 text-white bg-[#397e49] after:border-t-[#397e49] bubble-tail-none">
+            <p>Monorepo 구조로 관리</p>
+            <br />
+            <p>
+              - 공통 설정은 root package에서 일괄적용으로 공통된 컨벤션, 스타일
+              적용이 용이함!
+            </p>
+            <br />
+            <p>
+              - 한번에 publish, build를 실행할 수 있어서, 배포나 테스트가 빠름!
+            </p>
+          </SpeechBubble>
         </div>
       </div>
     </ProjectWrapper>

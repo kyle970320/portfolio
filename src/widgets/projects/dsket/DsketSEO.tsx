@@ -23,7 +23,7 @@ export default function DsketSEO() {
             <p className="font-semibold">SSR 기반 페이지 렌더링</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
+              <span className="w-[100%]">
                 Next js 사용으로 기본적인 SEO 성능 향상
               </span>
             </p>
@@ -33,7 +33,7 @@ export default function DsketSEO() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                템플릿 별 메타데이터 노션 연동으로 커스텀 추가
+                템플릿 별 메타데이터 노션 연동 커스텀 추가
               </span>
             </p>
             <p className="mt-1 text-xs flex items-center justify-between">
