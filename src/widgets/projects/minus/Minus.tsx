@@ -1,5 +1,6 @@
 import MinusDesc from "./MinusDesc";
 import MinusMain from "./MinusMain";
+import MinusMonorepo from "./MinusMonorepo";
 import MinusStory from "./MinusStory";
 
 export default function Minus() {
@@ -7,6 +8,7 @@ export default function Minus() {
     <>
       <MinusMain />
       <MinusDesc />
+      <MinusMonorepo />
       <MinusStory />
     </>
   );
