@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import SpeechBubble from "../../../shared/SpeechBubble";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
 export default function MinusDesc() {
+  const [imoji, setImoji] = useState<boolean>(true);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImoji((prev) => !prev);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <ProjectWrapper
       className="mb-10"
@@ -15,7 +24,7 @@ export default function MinusDesc() {
             프로젝트에 대하여
           </p>
           <p className="text-2xl text-center font-bold mt-3 mb-3">
-            개발 편의성을 갖춘 UI UX 라이브러리를 만들어요!
+            개발 편의성을 갖춘 UI UX 라이브러리 & Blog
           </p>
           <div className="mt-5 text-gray-700 text-sm text-center">
             <p>
@@ -32,8 +41,8 @@ export default function MinusDesc() {
             </p>
           </div>
         </div>
-        <div className="relative flex w-[60%] h-50 flex-wrap justify-center mt-10">
-          <div className="relative mt-18 w-full h-0">
+        <div className="relative flex flex-col w-[60%] h-50 flex-wrap justify-center items-center">
+          <div className="relative w-full h-0">
             <SpeechBubble className="absolute top-0 left-12 text-white bg-[#397e49] after:border-t-[#397e49] rotate-[-12deg] bubble-tail-none">
               말줄임이 일어났을때만 Tooltip을 표시하고 싶어요
             </SpeechBubble>
@@ -44,7 +53,19 @@ export default function MinusDesc() {
               너무 많은 rendering 때문에 성능이 저하되요!
             </SpeechBubble>
           </div>
-          <div className="text-[110px]">🤔</div>
+
+          <div className={`relative text-[110px]`}>
+            <div
+              className={`absolute top-0 left-0 translate-x-[-50%] transition-all duration-150 ${imoji ? "opacity-100" : "opacity-0"}`}
+            >
+              🤔
+            </div>
+            <div
+              className={`absolute top-0 left-0 translate-x-[-50%] transition-all duration-150  ${imoji ? "opacity-0" : "opacity-100"}`}
+            >
+              💡
+            </div>
+          </div>
         </div>
       </div>
     </ProjectWrapper>
