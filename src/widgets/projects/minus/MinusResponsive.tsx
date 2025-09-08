@@ -3,7 +3,7 @@ import SpeechBubble from "../../../shared/SpeechBubble";
 import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
-export default function DsketConnectNotion() {
+export default function MinusResponsive() {
   return (
     <ProjectWrapper
       className="mb-10"
@@ -12,12 +12,12 @@ export default function DsketConnectNotion() {
       }}
     >
       <div className="flex h-full">
-        <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
+        <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#354137]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
             Point 1
           </p>
           <div className="text-xl text-white font-bold">
-            <p>Notion 데이터 연동</p>
+            <p>Component Story 제공</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
             <p className="font-semibold">API Key 보안 처리</p>
@@ -61,7 +61,7 @@ export default function DsketConnectNotion() {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
+        <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#e8faec] overflow-hidden">
           <SpeechBubble className="absolute top-22 left-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
               <p>server-only 로직으로</p>
