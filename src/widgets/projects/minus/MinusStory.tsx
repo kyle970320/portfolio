@@ -11,7 +11,7 @@ export default function MinusStory() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#354137]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 2
+            Point 3
           </p>
           <div className="text-xl text-white font-bold">
             <p>Component Story 제공</p>
