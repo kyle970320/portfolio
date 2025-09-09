@@ -37,7 +37,7 @@ export default function HistorySection() {
       className="max-w-200 px-6 my-60 mx-auto text-white"
     >
       <div className="text-center">
-        <Typography className="text-center mb-2 font-gmarket text-gray-300">
+        <Typography className="text-center mb-2 font-gmarket text-gray-300 font-semibold">
           저의 history 입니다!
         </Typography>
       </div>

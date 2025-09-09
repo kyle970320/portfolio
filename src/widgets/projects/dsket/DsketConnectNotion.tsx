@@ -24,8 +24,10 @@ export default function DsketConnectNotion() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                Next.js의 SSR을 활용하여 Notion API Key를 안전하게 서버에서만
-                처리
+                Next.js의 SSR을 활용하여{" "}
+                <span className="text-green-300">
+                  Notion API Key 노출 최소화
+                </span>
               </span>
             </p>
           </div>
@@ -40,7 +42,11 @@ export default function DsketConnectNotion() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                다양한 블록 타입(Text, embed, List 등)을 React 컴포넌트로 매핑
+                다양한{" "}
+                <span className="text-green-300">
+                  블록 타입(Text, embed, List 등)을 React 컴포넌트
+                </span>
+                로 매핑
               </span>
             </p>
           </div>
@@ -49,8 +55,11 @@ export default function DsketConnectNotion() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                Notion 템플릿 별 타입을 내부 컴포넌트 타입과 매핑하는 Type
-                Mapper 설계
+                Notion{" "}
+                <span className="text-green-300">
+                  템플릿 별 타입을 내부 컴포넌트 타입과 매핑
+                </span>
+                하는 Type Mapper 설계
               </span>
             </p>
             <p className="mt-1 text-xs flex items-center justify-between">

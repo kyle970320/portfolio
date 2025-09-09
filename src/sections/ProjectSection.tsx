@@ -5,7 +5,7 @@ export default function ProjectSection() {
   return (
     <div id={"project_section"} className="max-w-200 px-6 mt-60 mx-auto">
       <div className="text-center">
-        <Typography className="text-center mb-2 font-gmarket text-gray-300">
+        <Typography className="text-center mb-2 font-gmarket text-gray-300 font-semibold">
           제가 만들었습니다!
         </Typography>
       </div>

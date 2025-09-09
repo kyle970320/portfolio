@@ -20,7 +20,7 @@ Website
         </Typography>
       </div>
       <div className="text-center mb-10">
-        <Typography className="text-2xl text-gray-300 font-gmarket">
+        <Typography className="text-2xl text-gray-300 font-gmarket font-semibold">
           여기로 연락주세요!
         </Typography>
       </div>

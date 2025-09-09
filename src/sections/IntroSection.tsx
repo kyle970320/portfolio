@@ -17,7 +17,7 @@ export default function IntroSection() {
   return (
     <div id={"intro_section"} className="max-w-200 px-6 mx-auto">
       <div className="text-center">
-        <Typography className="text-center mb-2 font-gmarket text-gray-300">
+        <Typography className="text-center mb-2 font-gmarket text-gray-300 font-semibold">
           저를 소개합니다!
         </Typography>
       </div>

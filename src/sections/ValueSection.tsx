@@ -34,7 +34,7 @@ export default function ValueSection() {
   return (
     <div id={"value_section"} className="max-w-200 px-6 m-60 mx-auto">
       <div className="text-center">
-        <Typography className="text-center mb-2 font-gmarket text-gray-300">
+        <Typography className="text-center mb-2 font-gmarket text-gray-300 font-semibold">
           제가 가진 가치관입니다!
         </Typography>
       </div>

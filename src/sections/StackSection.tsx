@@ -5,7 +5,7 @@ export default function StackSection() {
   return (
     <div id={"stack_section"} className="max-w-200 px-6 my-60 mx-auto">
       <div className="text-center">
-        <Typography className="text-center mb-2 font-gmarket text-gray-300">
+        <Typography className="text-center mb-2 font-gmarket text-gray-300 font-semibold">
           제가 가진 기술들입니다!
         </Typography>
       </div>

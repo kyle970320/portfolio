@@ -33,13 +33,9 @@ export default function DsketSEO() {
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                템플릿 별 메타데이터 노션 연동 커스텀 추가
-              </span>
-            </p>
-            <p className="mt-1 text-xs flex items-center justify-between">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                다양한 블록 타입(Text, embed, List 등)을 React 컴포넌트로 매핑
+                템플릿 별{" "}
+                <span className="text-green-300">메타데이터를 직접 커스텀</span>{" "}
+                할 수 있도록 구현
               </span>
             </p>
           </div>

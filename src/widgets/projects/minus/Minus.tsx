@@ -1,3 +1,4 @@
+import MinusBlog from "./MinusBlog";
 import MinusDesc from "./MinusDesc";
 import MinusMain from "./MinusMain";
 import MinusMonorepo from "./MinusMonorepo";
@@ -10,6 +11,7 @@ export default function Minus() {
       <MinusDesc />
       <MinusMonorepo />
       <MinusStory />
+      <MinusBlog />
     </>
   );
 }

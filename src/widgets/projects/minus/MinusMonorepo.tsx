@@ -1,3 +1,4 @@
+import { ArrowBigDown } from "lucide-react";
 import SpeechBubble from "../../../shared/SpeechBubble";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
@@ -18,17 +19,42 @@ export default function MinusMonorepo() {
             <p>Monorepo 구조의 라이브러리</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">자체 Story 제공</p>
-            <p className="mt-1 text-xs flex items-center justify-between">
+            <p className="font-semibold">일관된 rule 적용</p>
+            <div className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                Story Book을 없이 자체적으로 개발한 Component Story 제공
-              </span>
-            </p>
+              <p className="w-[94%]">
+                Root에서 포멧팅, 커밋룰 등 관리 하여 패지키
+                <span className="text-green-300"> 일관성 향상</span>
+              </p>
+            </div>
+          </div>
+          <div className="text-sm text-[rgba(255,255,255,0.8)]">
+            <p className="font-semibold">한번에 publish</p>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%]">
+                build, clean, install, publish 등 한꺼번에 진행 가능
+              </p>
+            </div>
+          </div>
+          <div className="text-sm text-[rgba(255,255,255,0.8)]">
+            <p className="font-semibold">분리된 라이브러리</p>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%]">필요한 패키지만 분리해서 사용</p>
+            </div>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%]">모든 패키지를 묶은 core 제공</p>
+            </div>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%] text-green-300">개발자 편의성 향상</p>
+            </div>
           </div>
         </div>
-        <div className="relative flex flex-col gap-3 p-8 w-full h-full bg-[#eef8ef] overflow-hidden">
-          <div className="text-slate-900">
+        <div className="relative flex justify-between gap-3 p-8 w-full h-full bg-[#eef8ef] overflow-hidden">
+          <div className="w-[70%] text-slate-900">
             <div className="mx-auto max-w-4xl p-6">
               <h1 className="text-xl font-bold mb-4">minus-ui 구조</h1>
 
@@ -288,18 +314,26 @@ export default function MinusMonorepo() {
               </ul>
             </div>
           </div>
-          <SpeechBubble className="absolute flex-col items-start w-50 z-1 top-55 right-10 h-38 text-white bg-[#397e49] after:border-t-[#397e49] bubble-tail-none">
-            <p>Monorepo 구조로 관리</p>
-            <br />
-            <p>
-              - 공통 설정은 root package에서 일괄적용으로 공통된 컨벤션, 스타일
-              적용이 용이함!
-            </p>
-            <br />
-            <p>
-              - 한번에 publish, build를 실행할 수 있어서, 배포나 테스트가 빠름!
-            </p>
-          </SpeechBubble>
+          <div className="flex flex-col justify-center items-center w-[30%]">
+            <SpeechBubble className="flex-col items-start w-full h-38 text-white bg-[#397e49] after:border-t-[#397e49] bubble-tail-none">
+              <p>Monorepo 구조로 관리</p>
+              <br />
+              <p>
+                - 공통 설정은 root package에서 일괄적용으로 공통된 컨벤션,
+                스타일 적용이 용이함!
+              </p>
+              <br />
+              <p>
+                - 한번에 publish, build를 실행할 수 있어서, 배포나 테스트가
+                빠름!
+              </p>
+            </SpeechBubble>
+            <ArrowBigDown size={50} />
+            <SpeechBubble className="flex-col items-center w-full h-38 text-white bg-[#397e49] after:border-t-[#397e49] bubble-tail-none">
+              <p className="text-lg">Monorepo 구조로</p>
+              <p className="text-lg text-green-300">전체 관리비용 감소!</p>
+            </SpeechBubble>
+          </div>
         </div>
       </div>
     </ProjectWrapper>
