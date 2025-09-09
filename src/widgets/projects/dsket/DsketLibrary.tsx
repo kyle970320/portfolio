@@ -1,5 +1,8 @@
-import { Circle, CodeXml, Github, X } from "lucide-react";
+import { ChevronsRight } from "lucide-react";
 import ProjectWrapper from "../ui/ProjectWrapper";
+import WindowWrapper from "../../../shared/WindowWrapper";
+import ImageViewer from "../../../shared/ImageViewer";
+import SpeechBubble from "../../../shared/SpeechBubble";
 
 export default function DsketLibrary() {
   return (
@@ -19,90 +22,86 @@ export default function DsketLibrary() {
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
             <p className="font-semibold">GitLab Package Registry 활용</p>
-            <p className="mt-1 text-xs flex items-center justify-between">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                공용 모듈을 내부 라이브러리로 배포, 팀 내 재사용 가능하게 설계
-              </span>
-            </p>
-            <p className="mt-1 text-xs flex items-center justify-between">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">배포 파이프라인 자동화 경험</span>
-            </p>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <p className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%]">
+                공용 모듈을
+                <span className="text-green-300">내부 라이브러리</span>로 배포,{" "}
+                <span className="text-green-300">팀 내 재사용 </span>
+                가능하게 설계
+              </p>
+            </div>
+            <div className="mt-1 text-xs flex items-center justify-between">
+              <p className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <p className="w-[94%]">
+                배포 <span className="text-green-300">파이프라인 자동화</span>{" "}
+                경험
+              </p>
+            </div>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">아키텍처 선택</p>
-            <p className="mt-1 text-xs flex items-center justify-between">
+            <p className="font-semibold">개발은 서브모듈, 배포는 라이브러리</p>
+            <p className="mt-1 text-xs flex items-center justify-between text-green-300">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                서브모듈: 의존성 동기화 문제, 학습곡선 가파름 → 제외
+                서브모듈로 개발단계에서 테스트, 충돌 확인
               </span>
             </p>
-            <p className="mt-1 text-xs flex items-center justify-between">
+            <p className="mt-1 text-xs flex items-center justify-between text-green-300">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                모노레포: 프로젝트 볼륨 커짐, 관리 비용 증가 → 제외
+                패키지 레지스트리로 독립적인 관리와 사용
               </span>
             </p>
-            <p className="mt-1 text-xs flex items-center justify-between">
+            <p className="mt-1 text-xs flex items-center justify-between text-red-400">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                패키지 레지스트리: 독립적 관리 + 확장성까지 → 최종 선택
+                모노레포는 프로젝트 볼륨 커짐, 관리 비용 증가 → 제외
               </span>
             </p>
           </div>
         </div>
-        <div className="relative flex items-stretch justify-between p-10 w-7/10 h-full bg-[#fefcec] overflow-hidden">
-          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-red-500">
-            <div className="font-semibold">서브모듈</div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <CodeXml size={48} />
-            </div>
-            <div className="border-r-3 mt-2 border-dashed h-24" />
-            <div className="flex flex-col items-center w-6/10">
-              <X size={30} color="red" />
-              <p className="text-xs text-red-500 text-center font-semibold">
-                <p>러닝 커브 높음</p>
-                <p>본 repo와 동기화 필요</p>
-              </p>
-            </div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <Github size={48} />
-            </div>
+        <div className="relative flex items-center justify-between p-10 w-7/10 h-full bg-[#fefcec] overflow-hidden">
+          <div className="flex flex-col items-center justify-around w-[45%]">
+            <SpeechBubble className="mb-10 h-25 w-65 after:!hidden">
+              <div className="text-sm font-semibold">
+                <p>기본 템플릿에서 서브모듈로 패키지 개발</p>
+                <br />
+                <p>- 즉시 테스트 가능</p>
+                <p>- 의존성 등의 충돌 미리 방지</p>
+              </div>
+            </SpeechBubble>
+            <WindowWrapper
+              className="relative w-full"
+              src="/dsket_submodule.png"
+              onClick={() => {
+                ImageViewer.open({
+                  url: "/dsket_submodule.png",
+                });
+              }}
+            />
           </div>
-          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-red-500">
-            <div className="font-semibold">모노레포</div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <CodeXml size={48} />
-            </div>
-            <div className="border-r-3 mt-2 border-dashed h-24" />
-            <div className="flex flex-col items-center w-6/10">
-              <X size={30} color="red" />
-              <p className="text-xs text-red-500 text-center font-semibold">
-                <p>프로젝트 볼륨 커짐</p>
-                <p>커밋기록 관리 힘듬</p>
-              </p>
-            </div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <Github size={48} />
-            </div>
+          <div className="w-[4%]">
+            <ChevronsRight size={30} />
           </div>
-          <div className="flex flex-col justify-between items-center py-4 w-[30%] bg-white rounded-2xl border-1 border-[#12b886]">
-            <div className="font-semibold">패키지</div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <CodeXml size={48} />
-            </div>
-            <div className="border-r-3 mt-2 border-dashed h-24" />
-            <div className="flex flex-col items-center w-6/10">
-              <Circle size={24} color="#12b886" className="mt-1 mb-0.5" />
-              <p className="text-xs text-main text-center font-semibold">
-                <p>연결, 분리 쉬움</p>
-                <p>독립적으로 관리 가능</p>
-              </p>
-            </div>
-            <div className="flex justify-center items-center w-20 h-20 bg-[#BBAE9C] rounded-[50%]">
-              <Github size={48} />
-            </div>
+          <div className="flex flex-col items-center justify-around w-[45%]">
+            <SpeechBubble className="mb-10 h-25 w-65 after:!hidden">
+              <div className="text-sm font-semibold">
+                <p>개발 완료시 Package Registry로 배포</p>
+                <br />
+                <p>- 불필요한 버전업 방지</p>
+                <p>- 독립적인 관리 가능</p>
+              </div>
+            </SpeechBubble>
+            <WindowWrapper
+              className="relative mt-2 w-full h-68"
+              src="/dsket_package.png"
+              onClick={() => {
+                ImageViewer.open({
+                  url: "/dsket_package.png",
+                });
+              }}
+            />
           </div>
         </div>
       </div>
