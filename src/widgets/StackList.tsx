@@ -155,11 +155,15 @@ export default function StackList() {
               {values.map((images, idx) => {
                 const { image, content } = images;
                 const mapKey = `${image}_${idx}`;
-
+                const canHover = currentCategory
+                  ? currentCategory === key
+                    ? "pointer-events-auto"
+                    : "pointer-events-none"
+                  : "pointer-events-auto";
                 return (
                   <div
                     key={mapKey}
-                    className={`relative w-12 h-12 opacity-100 transition-all ease-out duration-100 cursor-pointer`}
+                    className={`relative w-12 h-12 opacity-100 transition-all ease-out duration-100 cursor-pointer ${canHover}`}
                   >
                     <Tooltip
                       contents={content}
