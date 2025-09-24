@@ -1,5 +1,5 @@
 import ProjectWrapper from "../ui/ProjectWrapper";
-import { AppWindow, BookOpen, Building2 } from "lucide-react";
+import { AppWindow, Building2 } from "lucide-react";
 
 export default function DsketConnect() {
   return (
@@ -29,14 +29,6 @@ export default function DsketConnect() {
           >
             <AppWindow size={28} className="mr-1" />
             상세 내용 + 트러블슈팅 정리 Notion
-          </a>
-          <a
-            target="_blank"
-            href="https://d3jed8cbqldvwv.cloudfront.net/"
-            className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
-          >
-            <BookOpen size={28} className="mr-1" />
-            Minus Blog
           </a>
         </div>
       </div>
