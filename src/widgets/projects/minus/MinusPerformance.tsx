@@ -25,10 +25,7 @@ export default function MinusPerformance() {
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <p className="w-[94%]">
                 antd에서 변경시
-                <span className="text-green-300">
-                  {" "}
-                  1/10으로 렌더링 횟수 감소
-                </span>
+                <span className="text-green-300"> 90% 렌더링 횟수 감소</span>
               </p>
             </div>
           </div>

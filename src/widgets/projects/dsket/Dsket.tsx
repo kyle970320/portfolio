@@ -1,4 +1,4 @@
-import DsketConnectNotion from "./DsketConnectNotion";
+import DsketConnect from "./DsketConnect";
 import DsketDesc from "./DsketDesc";
 import DsketLibrary from "./DsketLibrary";
 import DsketMain from "./DsketMain";
@@ -9,9 +9,10 @@ export default function Dsket() {
     <>
       <DsketMain />
       <DsketDesc />
-      <DsketConnectNotion />
+      {/* <DsketConnectNotion /> */}
       <DsketSEO />
       <DsketLibrary />
+      <DsketConnect />
     </>
   );
 }

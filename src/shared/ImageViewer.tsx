@@ -279,7 +279,7 @@ export default function ImageViewer({ url, closeViewer }: Props) {
 
   return createPortal(
     <div
-      className="fixed z-101 top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-black/50 text-white will-change-transform animate-viewerScaleUp"
+      className="fixed z-104 top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-black/50 text-white will-change-transform animate-viewerScaleUp"
       onMouseDown={closeViewer}
       style={{ cursor: isMouseHold ? "grabbing" : "default" }}
     >
