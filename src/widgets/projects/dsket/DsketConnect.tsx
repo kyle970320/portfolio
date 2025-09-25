@@ -16,7 +16,7 @@ export default function DsketConnect() {
         <div className="flex flex-col gap-2 p-4 border-10 border-[#fdc958] rounded-xl">
           <a
             target="_blank"
-            href="https://github.com/Project-Minus/minus-ui/tree/develop/packages/core"
+            href="https://d-sket.io/"
             className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
           >
             <Building2 size={28} className="mr-1" />

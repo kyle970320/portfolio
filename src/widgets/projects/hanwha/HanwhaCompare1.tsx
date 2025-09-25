@@ -1,5 +1,6 @@
 import ImageViewer from "../../../shared/ImageViewer";
-import WindowView from "../../../shared/WindowView";
+import SpeechBubble from "../../../shared/SpeechBubble";
+import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
 export default function HanwhaCompare1() {
@@ -11,49 +12,54 @@ export default function HanwhaCompare1() {
       }}
     >
       <div className="flex h-full">
-        <div className="flex flex-col gap-3 items-start p-8 w-3/10 h-full bg-[#342F2D]">
+        <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            AS-IS
+            Point 1
           </p>
-          <div className="text-xl text-[#aaaaaa]">
-            <p>CCTV 운영 현황을</p>
-            <p>일일이 파악하고 있었어요.</p>
+          <div className="text-xl text-white font-bold">
+            <p>SEO 최적화</p>
           </div>
-          <div className="text-sm text-[#888888]">
-            <p>
-              실제 사용하는 CCTV 장비 정보와 운영 상태를 한눈에 확인할 수 있는
-              시스템이 없어,
+          <div className="text-sm text-[rgba(255,255,255,0.8)]">
+            <p className="font-semibold">SSR 기반 페이지 렌더링</p>
+            <p className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <span className="w-[100%]">
+                Next js 사용으로 기본적인 SEO 성능 향상
+              </span>
             </p>
-            <p>데이터를 개별적으로 확인하느라 관리 효율이 떨어졌습니다.</p>
+          </div>
+          <div className="text-sm text-[rgba(255,255,255,0.8)]">
+            <p className="font-semibold">메타 태그 커스텀 생성</p>
+            <p className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <span className="w-[94%]">
+                템플릿 별{" "}
+                <span className="text-green-300">메타데이터를 직접 커스텀</span>{" "}
+                할 수 있도록 구현
+              </span>
+            </p>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-start p-8 w-7/10 h-full bg-[#F7F2EA]">
-          <p className="py-1 px-2 rounded-[4px] bg-[#8B6A47] text-white">
-            TO-BE
-          </p>
-          <p className="text-2xl text-[#000000] font-bold">
-            대시보드를 통해 CCTV 정보를 한눈에 파악할 수 있어요.
-          </p>
-          <div className="text-sm">
-            <p>연동된 대시보드에서 CCTV 수, 저장 용량, 라이선스 등을</p>
-            <p>
-              시각적으로 확인하여 프로젝트 운영 현황을 쉽게 관리할 수 있게
-              되었습니다.
-            </p>
-          </div>
-          <div className="relative mt-7 mx-auto flex justify-center items-center w-[75%]">
-            <div
-              className="absolute flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.4)] opacity-0 text-white transition-all duration-150 hover:opacity-100 cursor-pointer"
-              onClick={() => {
-                ImageViewer.open({
-                  url: "/hanwha.png",
-                });
-              }}
-            >
-              View Detail!
+        <div className="relative flex items-center justify-between p-10 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
+          <WindowWrapper
+            className="relative w-[50%]"
+            src="/dsket_seo.png"
+            title="민규의 포트폴리오"
+            logo="/profile.png"
+            onClick={() => {
+              ImageViewer.open({
+                url: "/dsket_seo.png",
+              });
+            }}
+          />
+          <div className="absolute w-58 border-t-gray-300 border-t-3 border-dashed top-50 left-49.5 rotate-220" />
+          <SpeechBubble className="w-60 h-20 after:!hidden">
+            <div className="font-semibold">
+              <p>메타데이터를 동적으로 호출</p>
+              <p>title, desc, favicon 등의 값 수령</p>
+              <p>해당 값으로 SEO 최적화, 실시간 반영</p>
             </div>
-            <WindowView src="/hanwha.png" className="w-[100%]" />
-          </div>
+          </SpeechBubble>
         </div>
       </div>
     </ProjectWrapper>
