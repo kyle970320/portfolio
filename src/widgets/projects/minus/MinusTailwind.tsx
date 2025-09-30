@@ -3,7 +3,7 @@ import ProjectWrapper from "../ui/ProjectWrapper";
 export default function MinusTailwind() {
   return (
     <ProjectWrapper
-      className="mb-10"
+      className=""
       style={{
         background: "linear-gradient(180deg, #e8faec 0%, #FFFFFF 100%)",
       }}

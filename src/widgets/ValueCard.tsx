@@ -41,9 +41,7 @@ export default function ValueCard({ title, desc, color }: Props) {
       </div>
       <div className=" relative z-1 text-gray-300">
         <div>
-          <Typography className="text-gray-200 mix-blend-color-dodge">
-            {desc}
-          </Typography>
+          <Typography className="text-white">{desc}</Typography>
         </div>
       </div>
       <div

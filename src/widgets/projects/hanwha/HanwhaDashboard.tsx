@@ -14,7 +14,7 @@ export default function HanwhaDashboard() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 2
+            Point 1
           </p>
           <div className="text-xl text-white font-bold">
             <p>Dashboard 구현</p>

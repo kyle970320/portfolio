@@ -7,7 +7,7 @@ import SpeechBubble from "../../../shared/SpeechBubble";
 export default function DsketLibrary() {
   return (
     <ProjectWrapper
-      className="mb-10"
+      className=""
       style={{
         background: "linear-gradient(180deg, #fff3d6 0%, #FFFFFF 100%)",
       }}

@@ -6,19 +6,19 @@ const valueData = [
     id: "1",
     title: "창의성",
     desc: "항상 새로운 것에 도전하며, 결국 웹빌더 서비스를 만들었습니다.",
-    color: "",
+    color: "rgba(255,100,150,1)",
   },
   {
     id: "2",
     title: "책임감",
     desc: "어떠한 상황에서도 포기하지 않고 맡은 임무를 수행합니다.",
-    color: "",
+    color: "rgb(48, 164, 240)",
   },
   {
     id: "3",
     title: "객관성",
     desc: "객관적인 시선으로 바라보며, 논리적으로 소통하려 노력합니다.",
-    color: "",
+    color: "rgb(142, 185, 92)",
   },
 ];
 export default function ValueSection() {
