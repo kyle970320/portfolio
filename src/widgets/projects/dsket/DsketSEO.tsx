@@ -6,7 +6,6 @@ import ProjectWrapper from "../ui/ProjectWrapper";
 export default function DsketSEO() {
   return (
     <ProjectWrapper
-      className="mb-10"
       style={{
         background: "linear-gradient(180deg, #fff3d6 0%, #FFFFFF 100%)",
       }}

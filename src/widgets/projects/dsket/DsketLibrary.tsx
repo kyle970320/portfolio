@@ -7,7 +7,7 @@ import SpeechBubble from "../../../shared/SpeechBubble";
 export default function DsketLibrary() {
   return (
     <ProjectWrapper
-      className=""
+      className="mb-10"
       style={{
         background: "linear-gradient(180deg, #fff3d6 0%, #FFFFFF 100%)",
       }}
@@ -15,48 +15,53 @@ export default function DsketLibrary() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 3
+            Point 1
           </p>
           <div className="text-xl text-white font-bold">
-            <p>내부 로직 라이브러리화</p>
+            <p>공유 라이브러리 체계 구축</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">GitLab Package Registry 활용</p>
+            <p className="font-semibold">Git Submodule 구조 설계</p>
             <div className="mt-1 text-xs flex items-center justify-between">
               <p className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <p className="w-[94%]">
-                공용 모듈을
-                <span className="text-green-300">내부 라이브러리</span>로 배포,{" "}
-                <span className="text-green-300">팀 내 재사용 </span>
-                가능하게 설계
+                멀티테넌시 환경에서{" "}
+                <span className="text-green-300">
+                  공통 라이브러리를 Submodule로 분리
+                </span>
+                하여 <span className="text-green-300">코드 중복 제거</span>
               </p>
             </div>
             <div className="mt-1 text-xs flex items-center justify-between">
               <p className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <p className="w-[94%]">
-                배포 <span className="text-green-300">파이프라인 자동화</span>{" "}
-                경험
+                각 테넌트별 독립적인 저장소와{" "}
+                <span className="text-green-300">
+                  공유 라이브러리 간 의존성 관리
+                </span>{" "}
+                체계 구축
               </p>
             </div>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">개발은 서브모듈, 배포는 라이브러리</p>
-            <p className="mt-1 text-xs flex items-center justify-between text-green-300">
+            <p className="font-semibold">Private Registry 구축</p>
+            <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                서브모듈로 개발단계에서 테스트, 충돌 확인
+                npm Private Registry를 통해{" "}
+                <span className="text-green-300">
+                  버전 관리 및 배포 프로세스 표준화
+                </span>
               </span>
             </p>
-            <p className="mt-1 text-xs flex items-center justify-between text-green-300">
+            <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                패키지 레지스트리로 독립적인 관리와 사용
-              </span>
-            </p>
-            <p className="mt-1 text-xs flex items-center justify-between text-red-400">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                모노레포는 프로젝트 볼륨 커짐, 관리 비용 증가 → 제외
+                라이브러리 업데이트 시{" "}
+                <span className="text-green-300">
+                  모든 테넌트에 일관된 버전 적용
+                </span>
+                으로 안정성 확보
               </span>
             </p>
           </div>
@@ -65,10 +70,10 @@ export default function DsketLibrary() {
           <div className="flex flex-col items-center justify-around w-[45%]">
             <SpeechBubble className="mb-10 h-25 w-65 after:!hidden">
               <div className="text-sm font-semibold">
-                <p>기본 템플릿에서 서브모듈로 패키지 개발</p>
+                <p>Git Submodule로 공통 라이브러리 분리</p>
                 <br />
-                <p>- 즉시 테스트 가능</p>
-                <p>- 의존성 등의 충돌 미리 방지</p>
+                <p>- 멀티테넌시 환경에서 코드 중복 제거</p>
+                <p>- 각 테넌트별 의존성 관리 체계 구축</p>
               </div>
             </SpeechBubble>
             <WindowWrapper
@@ -87,10 +92,10 @@ export default function DsketLibrary() {
           <div className="flex flex-col items-center justify-around w-[45%]">
             <SpeechBubble className="mb-10 h-25 w-65 after:!hidden">
               <div className="text-sm font-semibold">
-                <p>개발 완료시 Package Registry로 배포</p>
+                <p>Private Registry로 버전 관리 체계화</p>
                 <br />
-                <p>- 불필요한 버전업 방지</p>
-                <p>- 독립적인 관리 가능</p>
+                <p>- 모든 테넌트에 일관된 버전 적용</p>
+                <p>- 중앙 집중식 관리로 코드 파편화 해결</p>
               </div>
             </SpeechBubble>
             <WindowWrapper

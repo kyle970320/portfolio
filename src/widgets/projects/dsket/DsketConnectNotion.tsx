@@ -14,58 +14,57 @@ export default function DsketConnectNotion() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 1
+            Point 2
           </p>
           <div className="text-xl text-white font-bold">
-            <p>Notion 데이터 연동</p>
+            <p>싱글톤 인스턴스 기반 렌더링</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">API Key 보안 처리</p>
+            <p className="font-semibold">싱글톤 패턴 적용</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                Next.js의 SSR을 활용하여{" "}
+                상세페이지 렌더링 로직을{" "}
+                <span className="text-green-300">싱글톤 인스턴스로 관리</span>
+                하여 메모리 효율성 향상
+              </span>
+            </p>
+            <p className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <span className="w-[94%]">
+                전역 상태 관리 및{" "}
                 <span className="text-green-300">
-                  Notion API Key 노출 최소화
+                  인스턴스 재사용으로 성능 최적화
                 </span>
               </span>
             </p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">Block Renderer 개발</p>
+            <p className="font-semibold">렌더링 로직 중앙화</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                Notion 블록 구조를 분석 후 직접 Block Renderer를 구현
-              </span>
-            </p>
-            <p className="mt-1 text-xs flex items-center justify-between">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                다양한{" "}
+                상세페이지 렌더링 로직을{" "}
                 <span className="text-green-300">
-                  블록 타입(Text, embed, List 등)을 React 컴포넌트
+                  단일 인스턴스에서 중앙 관리
                 </span>
-                로 매핑
-              </span>
-            </p>
-          </div>
-          <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">Type Mapper 개발</p>
-            <p className="mt-1 text-xs flex items-center justify-between">
-              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
-              <span className="w-[94%]">
-                Notion{" "}
-                <span className="text-green-300">
-                  템플릿 별 타입을 내부 컴포넌트 타입과 매핑
-                </span>
-                하는 Type Mapper 설계
+                하여 일관성 확보
               </span>
             </p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                데이터 구조 변경 시 유지보수가 용이하도록 확장성 고려
+                멀티테넌시 환경에서{" "}
+                <span className="text-green-300">렌더링 로직 파편화 방지</span>
+                및 유지보수성 향상
+              </span>
+            </p>
+            <p className="mt-1 text-xs flex items-center justify-between">
+              <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
+              <span className="w-[94%]">
+                싱글톤 패턴을 통한{" "}
+                <span className="text-green-300">예측 가능한 동작 보장</span>
+                으로 시스템 안정성 향상
               </span>
             </p>
           </div>
@@ -73,30 +72,30 @@ export default function DsketConnectNotion() {
         <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
           <SpeechBubble className="absolute top-22 left-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>server-only 로직으로</p>
-              <p>보안값들을 안전하게 처리</p>
+              <p>싱글톤 인스턴스로</p>
+              <p>렌더링 로직 중앙 관리</p>
             </div>
           </SpeechBubble>
           <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 left-49.5 rotate-313" />
           <SpeechBubble className="absolute top-10 h-20 w-48 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>선택된 템플릿에 맞춰</p>
-              <p>데이터 타입 매핑</p>
+              <p>단일 인스턴스로</p>
+              <p>일관성 확보</p>
             </div>
           </SpeechBubble>
           <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 right-49.5 rotate-223" />
           <SpeechBubble className="absolute top-22 right-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>block type에 맞춰</p>
-              <p>디자인 컴포넌트 render</p>
+              <p>예측 가능한 동작으로</p>
+              <p>시스템 안정성 확보</p>
             </div>
           </SpeechBubble>
           <WindowWrapper
             className="relative top-40 w-[55%]"
-            src="/dsket_connect.png"
+            src="/dsket_renderer.png"
             onClick={() => {
               ImageViewer.open({
-                url: "/dsket_connect.png",
+                url: "/dsket_renderer.png",
               });
             }}
           />

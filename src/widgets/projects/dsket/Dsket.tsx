@@ -10,9 +10,9 @@ export default function Dsket() {
     <>
       <DsketMain />
       <DsketDesc />
+      <DsketLibrary />
       <DsketConnectNotion />
       <DsketSEO />
-      <DsketLibrary />
       {/* <DsketConnect /> */}
     </>
   );
