@@ -1,5 +1,5 @@
 // import DsketConnect from "./DsketConnect";
-import DsketConnectNotion from "./DsketConnectNotion";
+import DsketSingletonRendering from "./DsketSingletonRendering";
 import DsketDesc from "./DsketDesc";
 import DsketLibrary from "./DsketLibrary";
 import DsketMain from "./DsketMain";
@@ -11,7 +11,7 @@ export default function Dsket() {
       <DsketMain />
       <DsketDesc />
       <DsketLibrary />
-      <DsketConnectNotion />
+      <DsketSingletonRendering />
       <DsketSEO />
       {/* <DsketConnect /> */}
     </>

@@ -3,7 +3,7 @@ import SpeechBubble from "../../../shared/SpeechBubble";
 import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
-export default function DsketConnectNotion() {
+export default function DsketSingletonRendering() {
   return (
     <ProjectWrapper
       className="mb-10"
@@ -72,22 +72,22 @@ export default function DsketConnectNotion() {
         <div className="relative flex flex-col gap-3 items-center p-8 w-7/10 h-full bg-[#fef9ec] overflow-hidden">
           <SpeechBubble className="absolute top-22 left-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>싱글톤 인스턴스로</p>
-              <p>렌더링 로직 중앙 관리</p>
+              <p>싱글톤으로</p>
+              <p>메모리 효율 · 재사용</p>
             </div>
           </SpeechBubble>
           <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 left-49.5 rotate-313" />
           <SpeechBubble className="absolute top-10 h-20 w-48 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>단일 인스턴스로</p>
-              <p>일관성 확보</p>
+              <p>단일 인스턴스에서</p>
+              <p>렌더링 로직 중앙 관리</p>
             </div>
           </SpeechBubble>
           <div className="absolute w-14 border-t-gray-500 border-t-3 border-dashed top-26 right-49.5 rotate-223" />
           <SpeechBubble className="absolute top-22 right-5 h-20 w-45 after:!hidden">
             <div className="text-sm font-semibold">
-              <p>예측 가능한 동작으로</p>
-              <p>시스템 안정성 확보</p>
+              <p>멀티테넌시에서도</p>
+              <p>파편화 없이 안정성 확보</p>
             </div>
           </SpeechBubble>
           <WindowWrapper
