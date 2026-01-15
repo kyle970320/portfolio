@@ -36,23 +36,28 @@ export default function Header() {
   const [headerBg, setHeaderBg] = useState<string>("bg-transparent opacity-30");
   const [progressBarWidth, setProgressBarWidth] = useState<string>("0%");
   useEffect(() => {
+    const scrollContainer = document.getElementById("scroll_container");
+    if (!scrollContainer) return;
+
     const modifyBg = () => {
-      console.log(window.scrollY);
       const windowH = window.innerHeight;
-      if (window.scrollY > windowH - 20) {
+      const scrollTop = scrollContainer.scrollTop;
+      const scrollHeight = scrollContainer.scrollHeight;
+
+      if (scrollTop > windowH - 20) {
         setHeaderBg("bg-[#ffffff5a] backdrop-blur-md opacity-100");
-        setProgressBarWidth(
-          `${((window.scrollY + windowH) / document.body.scrollHeight) * 100}%`,
-        );
+        setProgressBarWidth(`${((scrollTop + windowH) / scrollHeight) * 100}%`);
       } else {
         setHeaderBg("bg-transparent opacity-30");
         setProgressBarWidth(`0%`);
       }
     };
-    window.addEventListener("scroll", modifyBg);
+
+    scrollContainer.addEventListener("scroll", modifyBg);
     window.addEventListener("resize", modifyBg);
+
     return () => {
-      window.removeEventListener("scroll", modifyBg);
+      scrollContainer.removeEventListener("scroll", modifyBg);
       window.removeEventListener("resize", modifyBg);
     };
   }, []);

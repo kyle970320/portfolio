@@ -108,7 +108,7 @@ function Model() {
         anchorX="center"
         anchorY="bottom"
       >
-        평범한 개발자
+        실용주의 개발자
       </Text>
       <Text
         font="/font/GmarketSansTTFBold.ttf"
