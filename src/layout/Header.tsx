@@ -37,6 +37,7 @@ export default function Header() {
   const [progressBarWidth, setProgressBarWidth] = useState<string>("0%");
   useEffect(() => {
     const modifyBg = () => {
+      console.log(window.scrollY);
       const windowH = window.innerHeight;
       if (window.scrollY > windowH - 20) {
         setHeaderBg("bg-[#ffffff5a] backdrop-blur-md opacity-100");

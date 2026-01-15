@@ -73,7 +73,7 @@ export default function DsketMain() {
             <span className="inline-block text-xs text-black font-semibold">
               기여도
             </span>
-            <span className="text-[11px] text-gray-600">FE: 2명 / 40%</span>
+            <span className="text-[11px] text-gray-600">FE: 2명 / 70%</span>
           </div>
         </div>
         <div>

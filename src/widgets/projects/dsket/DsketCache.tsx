@@ -3,7 +3,7 @@ import SpeechBubble from "../../../shared/SpeechBubble";
 import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
-export default function DsketSEO() {
+export default function DsketCache() {
   return (
     <ProjectWrapper
       style={{
@@ -13,28 +13,27 @@ export default function DsketSEO() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#342F2D]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 2
+            Point 3
           </p>
           <div className="text-xl text-white font-bold">
-            <p>SEO 최적화</p>
+            <p>백엔드 캐시 서버 연동</p>
           </div>
           <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">SSR 기반 페이지 렌더링</p>
+            <p className="font-semibold">캐시 서버 기반 실시간 연동</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[100%]">
-                Next js 사용으로 기본적인 SEO 성능 향상
+                백엔드 캐시 서버를 통해{" "}
+                <span className="text-green-300">
+                  원천 API 호출 없이도 데이터 실시간 조회
+                </span>
               </span>
             </p>
-          </div>
-          <div className="text-sm text-[rgba(255,255,255,0.8)]">
-            <p className="font-semibold">메타 태그 커스텀 생성</p>
             <p className="mt-1 text-xs flex items-center justify-between">
               <span className="inline-block mr-1 w-1.5 h-1.5 rounded-2xl bg-[rgba(255,255,255,0.6)]" />
               <span className="w-[94%]">
-                템플릿 별{" "}
-                <span className="text-green-300">메타데이터를 직접 커스텀</span>{" "}
-                할 수 있도록 구현
+                D-Sket Refresh 기능으로
+                <span className="text-green-300"> 데이터 신선도 유지</span>
               </span>
             </p>
           </div>
@@ -54,9 +53,9 @@ export default function DsketSEO() {
           <div className="absolute w-58 border-t-gray-300 border-t-3 border-dashed top-50 left-49.5 rotate-220" />
           <SpeechBubble className="w-60 h-20 after:!hidden">
             <div className="font-semibold">
-              <p>메타데이터를 동적으로 호출</p>
-              <p>title, desc, favicon 등의 값 수령</p>
-              <p>해당 값으로 SEO 최적화, 실시간 반영</p>
+              <p>캐시 서버에서 데이터 조회</p>
+              <p>원천 API보다 빠른 응답 속도</p>
+              <p>실시간 연동 경험 제공</p>
             </div>
           </SpeechBubble>
         </div>

@@ -15,19 +15,30 @@ export default function Modal({ detail, closeViewer }: Props) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeViewer();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  });
+  }, [closeViewer]);
 
   return createPortal(
     <div className="fixed z-102 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.4)] backdrop-blur-3xl top-0">
       <div className="fixed z-100 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-w-250 max-w-250 w-[calc(100vw-60px)] h-[calc(100vh-60px)] flex flex-col justify-center items-center bg-transparent text-white will-change-transform animate-viewerScaleUp">
-        <div
-          className="flex justify-end w-full py-2 px-2"
-          onClick={closeViewer}
-        >
-          <X size={30} color="#AAAAAA" className="cursor-pointer" />
+        <div className="flex justify-end w-full py-2 px-2">
+          <X
+            size={30}
+            color="#AAAAAA"
+            className="cursor-pointer"
+            onClick={closeViewer}
+          />
         </div>
         <div className="w-full h-full overflow-auto custom-view-scrollbar">
           {detail}

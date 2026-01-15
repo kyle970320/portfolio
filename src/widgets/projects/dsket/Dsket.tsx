@@ -3,7 +3,7 @@ import DsketSingletonRendering from "./DsketSingletonRendering";
 import DsketDesc from "./DsketDesc";
 import DsketLibrary from "./DsketLibrary";
 import DsketMain from "./DsketMain";
-import DsketSEO from "./DsketSEO";
+import DsketCache from "./DsketCache";
 
 export default function Dsket() {
   return (
@@ -12,7 +12,7 @@ export default function Dsket() {
       <DsketDesc />
       <DsketLibrary />
       <DsketSingletonRendering />
-      <DsketSEO />
+      <DsketCache />
       {/* <DsketConnect /> */}
     </>
   );
