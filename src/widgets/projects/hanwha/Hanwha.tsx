@@ -1,3 +1,4 @@
+import HanwhaContact from "./HanwhaContact";
 import HanwhaDesc from "./HanwhaDesc";
 import HanwhaMain from "./HanwhaMain";
 import HanwhaLanguage from "./HanwhaLanguage";
@@ -10,6 +11,7 @@ export default function Hanwha() {
       <HanwhaDesc />
       <HanwhaDashboard />
       <HanwhaLanguage />
+      <HanwhaContact />
     </>
   );
 }

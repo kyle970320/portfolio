@@ -1,30 +1,22 @@
-import { AppWindow, Github, BookOpen } from "lucide-react";
+import { AppWindow, BookOpen } from "lucide-react";
 import ProjectWrapper from "../ui/ProjectWrapper";
 
-export default function MinusContact() {
+export default function HanwhaContact() {
   return (
     <ProjectWrapper
       style={{
-        background: "linear-gradient(180deg, #e8faec 0%, #FFFFFF 100%)",
+        background: "linear-gradient(180deg, #FFF6EA 0%, #FFFFFF 100%)",
       }}
     >
       <div className="flex flex-col items-center justify-center h-full">
         <div className="relative text-2xl text-center font-bold mt-3 mb-3">
           자세한 내용이 더 궁금하시다면!
-          <div className="absolute -bottom-1 left-0  w-full  border-10 border-[#c5fcd1]/50"></div>
+          <div className="absolute -bottom-1 left-0  w-full  border-10 border-[#FFDFC6]/50"></div>
         </div>
         <div className="flex flex-col gap-2 p-4">
           <a
             target="_blank"
-            href="https://github.com/Project-Minus/minus-ui/tree/develop/packages/core"
-            className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
-          >
-            <Github size={28} className="mr-1" />
-            Github
-          </a>
-          <a
-            target="_blank"
-            href="https://rounded-grey-2bb.notion.site/Minus-UI-27096c701dfa8083bae0d5469f783fa2?pvs=73"
+            href="https://rounded-grey-2bb.notion.site/DesignPro-2ea96c701dfa8094a4becf2644af30ac?pvs=73"
             className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
           >
             <AppWindow size={28} className="mr-1" />
@@ -32,11 +24,19 @@ export default function MinusContact() {
           </a>
           <a
             target="_blank"
-            href="https://d3jed8cbqldvwv.cloudfront.net/"
+            href="https://www.hanwhavision.com/wisenettoolbox_plus/#!/en/home"
             className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
           >
             <BookOpen size={28} className="mr-1" />
-            Minus Blog
+            Legacy 시스템
+          </a>
+          <a
+            target="_blank"
+            href="https://designpro.hanwhavision.cloud/"
+            className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
+          >
+            <BookOpen size={28} className="mr-1" />
+            DesignPro
           </a>
         </div>
       </div>

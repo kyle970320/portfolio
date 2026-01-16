@@ -4,7 +4,7 @@ import ProjectWrapper from "../ui/ProjectWrapper";
 export default function HanwhaLanguage() {
   return (
     <ProjectWrapper
-      className=""
+      className="mb-10"
       style={{
         background: "linear-gradient(180deg, #FFF6EA 0%, #FFFFFF 100%)",
       }}
