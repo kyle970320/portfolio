@@ -5,9 +5,8 @@ const historyData = [
     title: "(주)데이터스케쳐스",
     date: "2025",
     desc: `Notion 기반 웹빌더 서비스 런칭 (sub job)
-    - 범용성 있는 템플릿 개발
-    - 내부 로직을 private한 라이브러리화
-    - 300만원+ 수익 창출(진행중)
+    - 멀티테넌시 환경에서 범용성 있는 템플릿 개발
+    - 내부 로직을 private한 라이브러리화하여 유지보수 용이성 향상
     `,
     images: ["/notion_logo.png", "/next_logo.jpg", "/free1.jpg"],
   },
@@ -25,7 +24,7 @@ const historyData = [
     date: "2023 ~ 2024",
     desc: `외주 개발
     - 아워홈 스마트팩토리 전환 디지털 클러스터 사업
-    - 풀무원 내부 HR 어플 유지 보수
+    - 인테리어 통합 O2O 플랫폼 구축
     `,
     images: ["/free1.jpg", "/free1.jpg", "/free1.jpg"],
   },

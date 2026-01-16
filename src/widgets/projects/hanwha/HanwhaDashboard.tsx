@@ -1,4 +1,3 @@
-import { BriefcaseBusiness, Cctv, ChartBar, Map } from "lucide-react";
 import ImageViewer from "../../../shared/ImageViewer";
 import WindowWrapper from "../../../shared/WindowWrapper";
 import ProjectWrapper from "../ui/ProjectWrapper";
@@ -32,38 +31,6 @@ export default function HanwhaDashboard() {
           </div>
         </div>
         <div className="flex flex-col gap-0 justify-center items-center p-8 w-7/10 h-full bg-[#F7F2EA]">
-          <p className="flex justify-between w-2/3 text-[#000000] font-bold">
-            <Map
-              size={40}
-              style={{
-                position: "relative",
-                animation: "posUp infinite 0.6s alternate",
-              }}
-            />
-            <Cctv
-              size={40}
-              style={{
-                position: "relative",
-                animation: "posUp infinite 0.6s alternate",
-                animationDelay: "0.6s",
-              }}
-            />
-            <BriefcaseBusiness
-              size={40}
-              style={{
-                position: "relative",
-                animation: "posUp infinite 0.6s alternate",
-              }}
-            />
-
-            <ChartBar
-              size={40}
-              style={{
-                position: "relative",
-                animation: "posUp infinite 0.6s alternate",
-              }}
-            />
-          </p>
           <div className="text-sm">
             <div className="mt-0 flex justify-center items-center">
               <WindowWrapper

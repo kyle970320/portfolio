@@ -1,6 +1,7 @@
 import Modal from "../shared/Modal";
 import { Typography } from "../shared/Typography";
 import Dsket from "./projects/dsket/Dsket";
+import Extra from "./projects/extra/Extra";
 import Hanwha from "./projects/hanwha/Hanwha";
 import Minus from "./projects/minus/Minus";
 
@@ -12,22 +13,23 @@ const projectData = [
     image: "/dsket_thumb.png",
   },
   {
+    id: "minus",
+    title: "Minus",
+    desc: "Minus는 개발 경험, 학습 기록, 개인적인 생각을 체계적으로 정리하고 공유하기 위한 블로그 기반 플랫폼입니다. 블로그는 Component, Study, Article 세 가지 카테고리로 구성되며배포한 UI 라이브러리(Minus-ui)의 문서 역할도 함께 수행합니다. UI 라이브러리는 모노레포 구조로 구성되어 있으며, 필요한 패키지만 선택설치하거나 core 패키지로 일괄 사용이 가능합니다. 블로그는 AWS S3와 CloudFront로 배포되며 GitHub Actions 기반 CI/CD가 적용되어 있습니다.",
+    image: "/minus_thumb.png",
+  },
+  {
     id: "hanwha",
     title: "한화비전의 DesignPro",
     desc: "DesignPro는 네트워크 제품 구성과 프로젝트 설계를 지원하는 웹 애플리케이션입니다. 프로젝트 생성, 지역 설정, 위치 지정, 용량 계산, 제품 비교, 데이터 시각화, 보고서 출력 등 프로젝트 관리에 필요한 주요 기능을 제공합니다.",
     image: "/hanwha_thumb.png",
   },
   {
-    id: "minus",
-    title: "Minus",
-    desc: "Minus는 개발 경험, 학습 기록, 개인적인 생각을 체계적으로 정리하고 공유하기 위한 블로그 기반 플랫폼입니다. 블로그는 Component, Study, Article 세 가지 카테고리로 구성되며배포한 UI 라이브러리(Minus-ui)의 문서 역할도 함께 수행합니다. UI 라이브러리는 모노레포 구조로 구성되어 있으며, 필요한 패키지만 선택설치하거나 core 패키지로 일괄 사용이 가능합니다. 블로그는 AWS S3와 CloudFront로 배포되며 GitHub Actions 기반 CI/CD가 적용되어 있습니다.",
-    image: "/minus_thumb.png",
+    id: "extra",
+    title: "기타 프로젝트",
+    desc: "이외의 기타 프로젝트를 모아두었습니다.",
+    image: "/extra_thumb.png",
   },
-  // {
-  //   title: "project4",
-  //   desc: "project 설명입니다 project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다project 설명입니다",
-  //   image: "/free1.jpg",
-  // },
 ];
 
 export default function ProjectCards() {
@@ -50,6 +52,9 @@ export default function ProjectCards() {
                 }
                 if (id === "minus") {
                   return <Minus />;
+                }
+                if (id === "extra") {
+                  return <Extra />;
                 }
               };
               Modal.open({
