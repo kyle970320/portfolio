@@ -1,8 +1,8 @@
 import * as THREE from "three";
 
-export const setupLight = (scene: THREE.Scene) => {
+export const setupLight = (world: THREE.Group) => {
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
-  scene.add(ambientLight);
+  world.add(ambientLight);
 
   const mainLight = new THREE.DirectionalLight(0xffffff, 0.9);
   mainLight.position.set(8, 14, 10);
@@ -22,13 +22,13 @@ export const setupLight = (scene: THREE.Scene) => {
   mainLight.shadow.bias = -0.0002;
   mainLight.shadow.normalBias = 0.02;
 
-  scene.add(mainLight);
+  world.add(mainLight);
 
   const fillLight = new THREE.DirectionalLight(0x9090ff, 0.3);
   fillLight.position.set(-5, 5, -5);
-  scene.add(fillLight);
+  world.add(fillLight);
 
   const backLight = new THREE.DirectionalLight(0xff90ff, 0.2);
   backLight.position.set(0, 5, -10);
-  scene.add(backLight);
+  world.add(backLight);
 };

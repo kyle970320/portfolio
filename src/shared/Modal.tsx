@@ -15,17 +15,8 @@ export default function Modal({ detail, closeViewer }: Props) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeViewer();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       document.body.style.overflow = "auto";
-      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [closeViewer]);
 

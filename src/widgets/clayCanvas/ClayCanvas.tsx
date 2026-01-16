@@ -24,9 +24,12 @@ export default function App() {
     const currentMount = mountRef.current;
 
     const scene = new THREE.Scene();
-
+    // ✅ 전체를 담는 루트 그룹
+    const world = new THREE.Group();
+    world.position.y = 1.5;
+    scene.add(world);
     const camera = new THREE.PerspectiveCamera(
-      50,
+      55,
       window.innerWidth / window.innerHeight,
       0.1,
       1000,
@@ -41,7 +44,7 @@ export default function App() {
     currentMount.appendChild(renderer.domElement);
 
     // 광원 설정
-    setupLight(scene);
+    setupLight(world);
     // addBackGlow(scene);
     const characters: THREE.Group[] = [];
     const spacing = 2.7;
@@ -87,7 +90,7 @@ export default function App() {
       );
 
       characters.push(character);
-      scene.add(character);
+      world.add(character);
     }
 
     // ✅ 마우스 입력
@@ -306,7 +309,7 @@ export default function App() {
     // 노트북
     const laptop = new THREE.Group();
     setupLaptop(laptop);
-    scene.add(laptop);
+    world.add(laptop);
 
     // 노트북 아래 그림자(가짜)
     const csGeo = new THREE.CircleGeometry(2.4, 32);
@@ -318,7 +321,7 @@ export default function App() {
     const laptopShadow = new THREE.Mesh(csGeo, csMat);
     laptopShadow.rotation.x = -Math.PI / 2;
     laptopShadow.position.set(0, -11.98, 3);
-    scene.add(laptopShadow);
+    world.add(laptopShadow);
 
     animate();
 

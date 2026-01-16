@@ -8,7 +8,7 @@ export default function TypingTitle(props: Props) {
   const durationMs = duration || 3000;
 
   // 1줄 + 2줄로 분리해서 스타일 유지
-  const line1 = useMemo(() => "집중시키는 개발자,", []);
+  const line1 = useMemo(() => "완성도에 집중하는 개발자,", []);
   const line2 = useMemo(() => "박민규입니다", []);
 
   // 전체 타이핑 대상(줄바꿈 포함)
