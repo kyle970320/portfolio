@@ -156,8 +156,9 @@ export default function App() {
       animationFrameId = requestAnimationFrame(animate);
 
       const now = performance.now();
-      const deltaTime = now - (animate as any).lastTime || 16;
-      (animate as any).lastTime = now;
+      const deltaTime =
+        now - (animate as unknown as { lastTime: number }).lastTime || 16;
+      (animate as unknown as { lastTime: number }).lastTime = now;
 
       const intersectPoint = getLookTarget(now);
 

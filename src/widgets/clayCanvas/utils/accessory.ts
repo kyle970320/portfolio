@@ -465,10 +465,6 @@ export const getAccessoryForCharacter = (index: number, head: THREE.Mesh) => {
     "headphones", // 18
   ];
 
-  // ✅ 예시: 일부 인덱스에 후드/마스크를 섞고 싶으면 여기서 override 가능
-  // if (index === 2) return addHood(head);
-  // if (index === 10) return addMedicalMask(head);
-
   const accessoryType = accessories[index];
 
   switch (accessoryType) {

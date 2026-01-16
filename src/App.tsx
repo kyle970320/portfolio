@@ -1,7 +1,7 @@
 import Header from "./layout/Header";
 import Squares from "./layout/Squares";
 import ContactSection from "./sections/ContackSection";
-import GlutterBlob from "./sections/GlutterCanvas";
+// import GlutterBlob from "./sections/GlutterCanvas";
 import HistorySection from "./sections/HistorySection";
 import IntroSection from "./sections/IntroSection";
 import ProjectSection from "./sections/ProjectSection";
