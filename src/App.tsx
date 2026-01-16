@@ -7,7 +7,7 @@ import IntroSection from "./sections/IntroSection";
 import ProjectSection from "./sections/ProjectSection";
 import StackSection from "./sections/StackSection";
 import ValueSection from "./sections/ValueSection";
-// import ClayCanvas from "./widgets/clayCanvas/ClayCanvas";
+import ClayCanvas from "./widgets/clayCanvas/ClayCanvas";
 
 function App() {
   return (
@@ -26,8 +26,8 @@ function App() {
         className="relative m-auto w-full h-[100vh] overflow-x-hidden custom-view-scrollbar"
       >
         <Header />
-        {/* <ClayCanvas /> */}
-        <GlutterBlob />
+        <ClayCanvas />
+        {/* <GlutterBlob /> */}
         <div className="max-w-220 mx-auto">
           <IntroSection />
           <ValueSection />

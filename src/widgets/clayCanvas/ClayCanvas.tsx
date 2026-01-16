@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { setupLaptop } from "./utils/laptop";
 import { HAIR_COLORS, SKIN_COLORS } from "./constants/color";
-import { setupLight } from "./utils/light";
+import { addBackGlow, setupLight } from "./utils/light";
 import { createCharacter } from "./utils/character";
 import TypingTitle from "../TypingTitle";
 import { CHARACTER_OFFSETS } from "./constants/offset";
@@ -34,7 +34,7 @@ export default function App() {
 
     // 광원 설정
     setupLight(scene);
-
+    // addBackGlow(scene);
     const characters: THREE.Group[] = [];
     const spacing = 2.7;
     const characterCount = 19;
@@ -43,21 +43,25 @@ export default function App() {
       let x = 0;
       let y = 0;
       let z = 0;
-
+      const yVariation = 2.4;
       if (i < 7) {
+        const currentY = 0;
         x = (i - 3) * spacing;
-        y = -7;
+        y = -7 + currentY * yVariation;
       } else if (i < 13) {
+        const currentY = 1;
         x = (i - 9.5) * spacing;
-        y = -4;
+        y = -7 + currentY * yVariation;
         z = -1;
       } else if (i < 17) {
+        const currentY = 2;
         x = (i - 14.5) * spacing;
-        y = -1;
+        y = -7 + currentY * yVariation;
         z = -2;
       } else {
+        const currentY = 3;
         x = (i - 17.5) * spacing;
-        y = 2;
+        y = -7 + currentY * yVariation;
         z = -3;
       }
       const offset = CHARACTER_OFFSETS[i] ?? { x: 0, y: 0, z: 0 };
@@ -118,7 +122,8 @@ export default function App() {
       animationFrameId = requestAnimationFrame(animate);
 
       const now = performance.now();
-      const t = (now - startTime) / 1000;
+      const deltaTime = now - (animate as any).lastTime || 16;
+      (animate as any).lastTime = now;
 
       const intersectPoint = getLookTarget(now);
 
@@ -147,7 +152,7 @@ export default function App() {
           Math.min(maxRotation, targetRotationY),
         );
 
-        const lerpFactor = t < 2 ? 0.06 : t < 3 ? 0.12 : 0.1;
+        const lerpFactor = 0.1;
 
         // head / face 회전
         char.userData.faceGroup.rotation.y +=
@@ -161,7 +166,7 @@ export default function App() {
           (clampedRotationX - char.userData.head.rotation.x) * lerpFactor;
 
         // pupil 이동
-        const pupilMovement = 0.05;
+        const pupilMovement = 0.06;
         const pupilX = Math.max(
           -pupilMovement,
           Math.min(pupilMovement, direction.x * 0.02),
@@ -180,6 +185,50 @@ export default function App() {
           (pupilX - char.userData.rightPupil.position.x) * lerpFactor;
         char.userData.rightPupil.position.y +=
           (pupilY - char.userData.rightPupil.position.y) * lerpFactor;
+
+        // ✨ 눈 깜빡임 애니메이션
+        char.userData.blinkTimer += deltaTime;
+
+        if (char.userData.blinkTimer >= char.userData.nextBlinkTime) {
+          char.userData.isBlinking = true;
+          char.userData.blinkProgress = 0;
+          char.userData.blinkTimer = 0;
+          char.userData.nextBlinkTime = 6000 + Math.random() * 5000;
+        }
+
+        if (char.userData.isBlinking) {
+          char.userData.blinkProgress += deltaTime * 0.01;
+
+          const blinkDuration = 850;
+          let blinkPhase = (char.userData.blinkProgress * 1000) / blinkDuration;
+
+          if (blinkPhase > 2) {
+            char.userData.isBlinking = false;
+            blinkPhase = 0;
+          }
+
+          const eyelidScale = blinkPhase <= 1 ? blinkPhase : 2 - blinkPhase;
+
+          if (char.userData.leftEyelid && char.userData.rightEyelid) {
+            char.userData.leftEyelid.scale.y = 0.01 + eyelidScale * 1.19;
+            char.userData.rightEyelid.scale.y = 0.01 + eyelidScale * 1.19;
+          }
+
+          if (char.userData.leftEyeWhite && char.userData.rightEyeWhite) {
+            const eyeScale = 1 - eyelidScale * 0.9;
+            char.userData.leftEyeWhite.scale.y = 1.2 * eyeScale;
+            char.userData.rightEyeWhite.scale.y = 1.2 * eyeScale;
+          }
+        } else {
+          if (char.userData.leftEyelid && char.userData.rightEyelid) {
+            char.userData.leftEyelid.scale.y = 0.01;
+            char.userData.rightEyelid.scale.y = 0.01;
+          }
+          if (char.userData.leftEyeWhite && char.userData.rightEyeWhite) {
+            char.userData.leftEyeWhite.scale.y = 1.2;
+            char.userData.rightEyeWhite.scale.y = 1.2;
+          }
+        }
       });
 
       renderer.render(scene, camera);
@@ -236,55 +285,10 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
-    const totalLockMs = 3000; // 2초 + 1초
-
-    // 현재 스크롤 위치 저장
-    const scrollY = 0;
-
-    const container = document.getElementById("scroll_container");
-
-    if (!container) {
-      return;
-    }
-
-    const prevBodyOverflow = container.style.overflow;
-    const prevBodyPosition = container.style.position;
-    const prevBodyTop = container.style.top;
-    const prevBodyWidth = container.style.width;
-
-    container.style.overflow = "hidden";
-    container.style.position = "fixed";
-    container.style.top = `-${scrollY}px`;
-    container.style.width = "100%";
-
-    const timer = window.setTimeout(() => {
-      // 원복
-      container.style.overflow = prevBodyOverflow;
-      container.style.position = prevBodyPosition;
-      container.style.top = prevBodyTop;
-      container.style.width = prevBodyWidth;
-
-      // 스크롤 위치 복구
-      window.scrollTo(0, scrollY);
-    }, totalLockMs);
-
-    return () => {
-      window.clearTimeout(timer);
-
-      // 언마운트될 때도 안전하게 원복
-      container.style.overflow = prevBodyOverflow;
-      container.style.position = prevBodyPosition;
-      container.style.top = prevBodyTop;
-      container.style.width = prevBodyWidth;
-      window.scrollTo(0, scrollY);
-    };
-  }, []);
-
   return (
     <div id="main_section" className="relative w-full h-screen">
       <TypingTitle duration={2000} />
-      <div ref={mountRef} className="w-full h-full" />
+      <div ref={mountRef} className="relative w-full h-full" />
     </div>
   );
 }

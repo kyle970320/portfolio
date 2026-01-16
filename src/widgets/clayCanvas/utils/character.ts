@@ -45,7 +45,7 @@ export const createCharacter = (
 ) => {
   const group = new THREE.Group();
   const points = makeBlobProfile({
-    height: 2.9,
+    height: 1.9,
     baseRadius: 0.3,
     topRadius: 0.55,
     bulge: 0.4,
@@ -55,9 +55,9 @@ export const createCharacter = (
 
   const bodyGeometry = new THREE.LatheGeometry(points, 28);
   const bodyMaterial = new THREE.MeshStandardMaterial({
-    color: 0x555555,
-    roughness: 0.4,
-    metalness: 0.0,
+    color: 0x333333,
+    roughness: 0.1,
+    metalness: 0.1,
   });
   const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
   body.position.y = -1.5 - (BODY_OFFSETS[i].y - 0.7);
@@ -85,7 +85,14 @@ export const createCharacter = (
 
   hairFactories[i](head, hairColor);
   setupEar(head, color);
-  const { leftPupil, rightPupil } = setupEye(faceGroup);
+  const {
+    leftPupil,
+    rightPupil,
+    leftEyeWhite,
+    rightEyeWhite,
+    leftEyelid,
+    rightEyelid,
+  } = setupEye(faceGroup);
 
   group.position.set(x, y, z);
   group.scale.set(1.5, 1.5, 0.5);
@@ -94,7 +101,15 @@ export const createCharacter = (
     faceGroup: faceGroup,
     leftPupil: leftPupil,
     rightPupil: rightPupil,
+    leftEyeWhite: leftEyeWhite,
+    rightEyeWhite: rightEyeWhite,
+    leftEyelid: leftEyelid,
+    rightEyelid: rightEyelid,
     originalRotation: { x: 0, y: 0 },
+    blinkTimer: 0,
+    nextBlinkTime: 2000 + Math.random() * 4000,
+    isBlinking: false,
+    blinkProgress: 0,
   };
 
   const csGeo = new THREE.CircleGeometry(0.9, 24);
@@ -108,5 +123,6 @@ export const createCharacter = (
   contact.position.y = -2.4;
   contact.position.z = 0.1;
   group.add(contact);
+
   return group;
 };

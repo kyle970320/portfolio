@@ -40,7 +40,7 @@ export const setupLaptop = (laptop: THREE.Group) => {
   laptop.add(hinge);
 
   // RectAreaLight (화면 크기에 맞춤)
-  const screenLight = new THREE.RectAreaLight(0x858585, 70, 5.0, 2.7);
+  const screenLight = new THREE.RectAreaLight(0x302eb2, 70, 5.0, 2.7);
   screenLight.position.set(0, 1.5, -1.15);
   screenLight.rotation.y = Math.PI;
   laptop.add(screenLight);

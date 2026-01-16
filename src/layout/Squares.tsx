@@ -148,7 +148,7 @@ export default function Squares({
   return (
     <canvas
       ref={canvasRef}
-      className="fixed w-full h-full border-none block"
+      className="fixed w-full h-full border-none block bg-[#18001f]"
     ></canvas>
   );
 }
