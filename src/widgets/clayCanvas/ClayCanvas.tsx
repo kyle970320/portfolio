@@ -2,11 +2,19 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { setupLaptop } from "./utils/laptop";
 import { HAIR_COLORS, SKIN_COLORS } from "./constants/color";
-import { addBackGlow, setupLight } from "./utils/light";
+import { setupLight } from "./utils/light";
 import { createCharacter } from "./utils/character";
 import TypingTitle from "../TypingTitle";
 import { CHARACTER_OFFSETS } from "./constants/offset";
+function triggerReaction(char: THREE.Group) {
+  // 이미 리액션 중이면 무시
+  if (char.userData.isReacting) return;
 
+  char.userData.isReacting = true;
+  char.userData.reactionType = "surprise";
+  char.userData.reactionProgress = 0;
+  char.userData.reactionDuration = 400; // 1초
+}
 export default function App() {
   const mountRef = useRef<HTMLDivElement>(null);
 
@@ -93,7 +101,7 @@ export default function App() {
     }
 
     window.addEventListener("mousemove", onMouseMove);
-
+    window.addEventListener("click", onMouseClick);
     // ✅ 타임라인 시작
     const startTime = performance.now();
 
@@ -117,7 +125,33 @@ export default function App() {
     }
 
     let animationFrameId: number;
+    const raycaster = new THREE.Raycaster();
+    const clickMouse = new THREE.Vector2();
+    function onMouseClick(event: MouseEvent) {
+      clickMouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      clickMouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
+      raycaster.setFromCamera(clickMouse, camera);
+
+      const intersects = raycaster.intersectObjects(characters, true);
+
+      if (intersects.length > 0) {
+        // 클릭된 캐릭터의 최상위 그룹 찾기
+        let clickedChar = intersects[0].object;
+        while (
+          clickedChar.parent &&
+          !characters.includes(clickedChar as THREE.Group)
+        ) {
+          clickedChar = clickedChar.parent;
+        }
+
+        if (characters.includes(clickedChar as THREE.Group)) {
+          const char = clickedChar as THREE.Group;
+          // 리액션 트리거
+          triggerReaction(char);
+        }
+      }
+    }
     function animate() {
       animationFrameId = requestAnimationFrame(animate);
 
@@ -229,6 +263,40 @@ export default function App() {
             char.userData.rightEyeWhite.scale.y = 1.2;
           }
         }
+
+        if (char.userData.isReacting) {
+          char.userData.reactionProgress += deltaTime;
+
+          const progress =
+            char.userData.reactionProgress / char.userData.reactionDuration;
+
+          if (progress >= 1) {
+            // 리액션 종료
+            char.userData.isReacting = false;
+            char.userData.head.scale.set(1, 1, 1);
+            char.userData.head.position.y = 0.5;
+          } else {
+            if (char.userData.reactionType === "surprise") {
+              // 깜짝 놀람: 머리 커지고 위로 튕김
+              const bounce = Math.sin(progress * Math.PI);
+              char.userData.head.scale.setScalar(1 + bounce * 0.2);
+              char.userData.head.position.y = 0.5 + bounce * 0.3;
+
+              // 눈 크게 뜨기
+              if (char.userData.leftEyeWhite && char.userData.rightEyeWhite) {
+                char.userData.leftEyeWhite.scale.y = 1.2 + bounce * 0.4;
+                char.userData.rightEyeWhite.scale.y = 1.2 + bounce * 0.4;
+              }
+            } else if (char.userData.reactionType === "wave") {
+              // 손 흔들기: 좌우로 흔들림
+              const wave = Math.sin(progress * Math.PI * 4) * 0.3;
+              char.userData.head.rotation.z = wave;
+
+              // 몸도 살짝 흔들기
+              char.rotation.z = wave * 0.5;
+            }
+          }
+        }
       });
 
       renderer.render(scene, camera);
@@ -264,6 +332,7 @@ export default function App() {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("resize", onWindowResize);
+      window.removeEventListener("click", onMouseClick);
 
       scene.traverse((object) => {
         if (object instanceof THREE.Mesh && object.geometry) {

@@ -3,7 +3,7 @@ import { hairFactories } from "./hair";
 import { setupEar } from "./ear";
 import { setupEye } from "./eye";
 import { BODY_OFFSETS } from "../constants/offset";
-
+import { getAccessoryForCharacter } from "./accessory";
 export const makeBlobProfile = ({
   height = 5,
   baseRadius = 1.8,
@@ -84,6 +84,7 @@ export const createCharacter = (
   head.add(faceGroup);
 
   hairFactories[i](head, hairColor);
+  getAccessoryForCharacter(i, head);
   setupEar(head, color);
   const {
     leftPupil,
@@ -110,6 +111,11 @@ export const createCharacter = (
     nextBlinkTime: 2000 + Math.random() * 4000,
     isBlinking: false,
     blinkProgress: 0,
+    // ... 기존 필드들
+    isReacting: false,
+    reactionType: "surprise",
+    reactionProgress: 0,
+    reactionDuration: 1000,
   };
 
   const csGeo = new THREE.CircleGeometry(0.9, 24);

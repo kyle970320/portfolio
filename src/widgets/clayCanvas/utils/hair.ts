@@ -1,14 +1,5 @@
 import * as THREE from "three";
 
-type HairFactory = (head: THREE.Mesh, hairColor: number) => void;
-
-export function randomPickFactory(arr: HairFactory[]): HairFactory {
-  return arr[Math.floor(Math.random() * arr.length)] as HairFactory;
-}
-export function randomPickItem(arr: number[]) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
 const HEAD_RADIUS = 0.8;
 function hairBald(head: THREE.Mesh, hairColor: number) {
   return { head, hairColor };
@@ -151,7 +142,7 @@ function hairMohawk(head: THREE.Mesh, hairColor: number) {
   head.add(group);
 }
 export const hairFactories = [
-  (head: THREE.Mesh, hairColor: number) => hairCap(head, hairColor),
+  (head: THREE.Mesh, hairColor: number) => hairBald(head, hairColor),
   (head: THREE.Mesh, hairColor: number) => hairTwinBuns(head, hairColor),
   (head: THREE.Mesh, hairColor: number) => hairFluffy(head, hairColor),
   (head: THREE.Mesh, hairColor: number) => hairMinimal(head, hairColor),
