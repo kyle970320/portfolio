@@ -3,7 +3,7 @@ import ProjectWrapper from "../ui/ProjectWrapper";
 export default function MinusTailwind() {
   return (
     <ProjectWrapper
-      className=""
+      className="mb-10"
       style={{
         background: "linear-gradient(180deg, #e8faec 0%, #FFFFFF 100%)",
       }}
@@ -11,7 +11,7 @@ export default function MinusTailwind() {
       <div className="flex h-full">
         <div className="flex flex-col gap-4 items-start p-8 w-3/10 h-full bg-[#354137]">
           <p className="inline-block py-1 px-2 rounded-[4px] text-white bg-[#818181]">
-            Point 4
+            Point 2
           </p>
           <div className="text-xl text-white font-bold">
             <p>Tailwind plugin을 지원</p>

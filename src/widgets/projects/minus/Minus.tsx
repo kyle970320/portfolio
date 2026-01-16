@@ -1,10 +1,11 @@
+import MinusContact from "./MinusContact";
 import MinusDesc from "./MinusDesc";
 import MinusMain from "./MinusMain";
 import MinusPerformance from "./MinusPerformance";
-import MinusStory from "./MinusStory";
-// import MinusContact from "./MinusContact";
-import MinusBlog from "./MinusBlog";
 import MinusTailwind from "./MinusTailwind";
+// import MinusStory from "./MinusStory";
+// import MinusContact from "./MinusContact";
+// import MinusBlog from "./MinusBlog";
 
 export default function Minus() {
   return (
@@ -12,10 +13,10 @@ export default function Minus() {
       <MinusMain />
       <MinusDesc />
       <MinusPerformance />
-      <MinusStory />
-      {/* <MinusContact /> */}
-      <MinusBlog />
+      {/* <MinusStory /> */}
+      {/* <MinusBlog /> */}
       <MinusTailwind />
+      <MinusContact />
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function MinusContact() {
           </a>
           <a
             target="_blank"
-            href="https://github.com/Project-Minus/minus-ui/tree/develop/packages/core"
+            href="https://rounded-grey-2bb.notion.site/Minus-UI-27096c701dfa8083bae0d5469f783fa2?pvs=73"
             className="flex items-center text-gray-500 transition-all duration-100 hover:text-black"
           >
             <AppWindow size={28} className="mr-1" />
