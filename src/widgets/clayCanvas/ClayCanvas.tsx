@@ -112,11 +112,11 @@ export default function App() {
     function getLookTarget(now: number) {
       const t = (now - startTime) / 1000;
 
-      if (t < 2) {
+      if (t < 1.5) {
         return new THREE.Vector3(0, -12, 10);
       }
 
-      if (t < 3) {
+      if (t < 2.2) {
         return new THREE.Vector3(0, 0, 50);
       }
 
