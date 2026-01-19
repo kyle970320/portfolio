@@ -25,7 +25,11 @@ export default function Modal({ detail, closeViewer }: Props) {
       className="fixed z-102 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.4)] backdrop-blur-3xl top-0"
       onClick={closeViewer}
     >
-      <div className="fixed z-100 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-w-250 max-w-250 w-[calc(100vw-60px)] h-[calc(100vh-60px)] flex flex-col justify-center items-center bg-transparent text-white will-change-transform animate-viewerScaleUp">
+      <div className="fixed z-100 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-w-250 max-w-250 w-[calc(100vw-60px)] h-[calc(100vh-60px)] flex flex-col justify-center items-center bg-transparent text-white will-change-transform animate-viewerScaleUp"
+      
+      onClick={(e)=>{
+        e.stopPropagation();
+      }}>
         <div className="flex justify-end w-full py-2 px-2">
           <X
             size={30}
