@@ -6,12 +6,12 @@ import Hanwha from "./projects/hanwha/Hanwha";
 import Minus from "./projects/minus/Minus";
 
 const projectData = [
-  {
-    id: "dsket",
-    title: "D-sket",
-    desc: "D-sket 프로젝트는 간편하게 자신만의 웹사이트를 제공하는 웹빌더 서비스입니다.",
-    image: "/dsket_thumb.png",
-  },
+  // {
+  //   id: "dsket",
+  //   title: "D-sket",
+  //   desc: "D-sket 프로젝트는 간편하게 자신만의 웹사이트를 제공하는 웹빌더 서비스입니다.",
+  //   image: "/dsket_thumb.png",
+  // },
   {
     id: "minus",
     title: "Minus",

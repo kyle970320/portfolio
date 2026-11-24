@@ -2,7 +2,7 @@ import Header from "./layout/Header";
 import Squares from "./layout/Squares";
 import ContactSection from "./sections/ContackSection";
 // import GlutterBlob from "./sections/GlutterCanvas";
-import HistorySection from "./sections/HistorySection";
+// import HistorySection from "./sections/HistorySection";
 import IntroSection from "./sections/IntroSection";
 import ProjectSection from "./sections/ProjectSection";
 import StackSection from "./sections/StackSection";
@@ -31,7 +31,7 @@ function App() {
         <div className="max-w-220 mx-auto">
           <IntroSection />
           <ValueSection />
-          <HistorySection />
+          {/* <HistorySection /> */}
           <StackSection />
           <ProjectSection />
           <ContactSection />

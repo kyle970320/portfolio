@@ -15,10 +15,10 @@ const headerItem = [
     title: "Value",
     id: "value_section",
   },
-  {
-    title: "History",
-    id: "history_section",
-  },
+  // {
+  //   title: "History",
+  //   id: "history_section",
+  // },
   {
     title: "Stack",
     id: "stack_section",
